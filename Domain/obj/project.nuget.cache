@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "7umsYBfCkUtobM2QTi7zgXnXRxZKQPIuEv5pKf5B+sApqslGQpk7QBpIrmgvx5ojr8yMGgascl+zFhdCbDMsXQ==",
+  "success": true,
+  "projectFilePath": "/home/diego/RiderProjects/BreakingForce/Domain/Domain.csproj",
+  "expectedPackageFiles": [
+    "/home/diego/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.1/microsoft.aspnetcore.app.ref.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

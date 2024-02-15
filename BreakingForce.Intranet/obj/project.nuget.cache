@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "+4Srz+xc/6D3dA/NlVPTUfpbhbzLpYTf23BwpoGZ6QM09XU4mNqaRPexIOjBHESd/10f96Til3carh222Usdnw==",
+  "success": true,
+  "projectFilePath": "/home/diego/RiderProjects/BreakingForce/BreakingForce.Intranet/BreakingForce.Intranet.csproj",
+  "expectedPackageFiles": [
+    "/home/diego/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.1/microsoft.aspnetcore.app.ref.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
