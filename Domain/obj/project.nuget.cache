@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "7umsYBfCkUtobM2QTi7zgXnXRxZKQPIuEv5pKf5B+sApqslGQpk7QBpIrmgvx5ojr8yMGgascl+zFhdCbDMsXQ==",
+  "dgSpecHash": "lWRIPSieV/MoDx1NtdMFN1m+unfntEq3zom5xkYoJ9RsY4IUmGPyU/Djnqzm9lsvW9G8a2nCdqbCEEpYQ4Okzg==",
   "success": true,
-  "projectFilePath": "/home/diego/RiderProjects/BreakingForce/Domain/Domain.csproj",
+  "projectFilePath": "/home/diego-dev/RiderProjects/BreakingForce/Domain/Domain.csproj",
   "expectedPackageFiles": [
-    "/home/diego/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.1/microsoft.aspnetcore.app.ref.8.0.1.nupkg.sha512"
+    "/home/diego-dev/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.1/microsoft.aspnetcore.app.ref.8.0.1.nupkg.sha512"
   ],
   "logs": []
 }

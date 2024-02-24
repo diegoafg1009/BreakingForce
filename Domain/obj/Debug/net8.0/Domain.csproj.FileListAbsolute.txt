@@ -1,0 +1,12 @@
+/home/diego-dev/RiderProjects/BreakingForce/Domain/bin/Debug/net8.0/Domain.deps.json
+/home/diego-dev/RiderProjects/BreakingForce/Domain/bin/Debug/net8.0/Domain.dll
+/home/diego-dev/RiderProjects/BreakingForce/Domain/bin/Debug/net8.0/Domain.pdb
+/home/diego-dev/RiderProjects/BreakingForce/Domain/obj/Debug/net8.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/diego-dev/RiderProjects/BreakingForce/Domain/obj/Debug/net8.0/Domain.AssemblyInfoInputs.cache
+/home/diego-dev/RiderProjects/BreakingForce/Domain/obj/Debug/net8.0/Domain.AssemblyInfo.cs
+/home/diego-dev/RiderProjects/BreakingForce/Domain/obj/Debug/net8.0/Domain.csproj.CoreCompileInputs.cache
+/home/diego-dev/RiderProjects/BreakingForce/Domain/obj/Debug/net8.0/Domain.sourcelink.json
+/home/diego-dev/RiderProjects/BreakingForce/Domain/obj/Debug/net8.0/Domain.dll
+/home/diego-dev/RiderProjects/BreakingForce/Domain/obj/Debug/net8.0/refint/Domain.dll
+/home/diego-dev/RiderProjects/BreakingForce/Domain/obj/Debug/net8.0/Domain.pdb
+/home/diego-dev/RiderProjects/BreakingForce/Domain/obj/Debug/net8.0/ref/Domain.dll

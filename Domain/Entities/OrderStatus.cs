@@ -4,7 +4,5 @@ namespace Domain.Entities;
 
 public class OrderStatus : Status
 {
-    protected OrderStatus(Guid id, string name) : base(id, name)
-    {
-    }
+    public List<Order> Orders { get; set; } = [];
 }

@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/home/diego/.nuget/packages/": {}
+    "/home/diego-dev/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/diego/RiderProjects/BreakingForce/Domain/Domain.csproj",
+      "projectUniqueName": "/home/diego-dev/RiderProjects/BreakingForce/Domain/Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "/home/diego/RiderProjects/BreakingForce/Domain/Domain.csproj",
-      "packagesPath": "/home/diego/.nuget/packages/",
-      "outputPath": "/home/diego/RiderProjects/BreakingForce/Domain/obj/",
+      "projectPath": "/home/diego-dev/RiderProjects/BreakingForce/Domain/Domain.csproj",
+      "packagesPath": "/home/diego-dev/.nuget/packages/",
+      "outputPath": "/home/diego-dev/RiderProjects/BreakingForce/Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/diego/.nuget/NuGet/NuGet.Config"
+        "/home/diego-dev/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"

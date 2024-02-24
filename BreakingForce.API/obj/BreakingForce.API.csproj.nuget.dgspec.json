@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/diego/RiderProjects/BreakingForce/BreakingForce.API/BreakingForce.API.csproj": {}
+    "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/BreakingForce.API.csproj": {}
   },
   "projects": {
-    "/home/diego/RiderProjects/BreakingForce/Application/Application.csproj": {
+    "/home/diego-dev/RiderProjects/BreakingForce/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/diego/RiderProjects/BreakingForce/Application/Application.csproj",
+        "projectUniqueName": "/home/diego-dev/RiderProjects/BreakingForce/Application/Application.csproj",
         "projectName": "Application",
-        "projectPath": "/home/diego/RiderProjects/BreakingForce/Application/Application.csproj",
-        "packagesPath": "/home/diego/.nuget/packages/",
-        "outputPath": "/home/diego/RiderProjects/BreakingForce/Application/obj/",
+        "projectPath": "/home/diego-dev/RiderProjects/BreakingForce/Application/Application.csproj",
+        "packagesPath": "/home/diego-dev/.nuget/packages/",
+        "outputPath": "/home/diego-dev/RiderProjects/BreakingForce/Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/diego/.nuget/NuGet/NuGet.Config"
+          "/home/diego-dev/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -73,17 +73,17 @@
         }
       }
     },
-    "/home/diego/RiderProjects/BreakingForce/BreakingForce.API/BreakingForce.API.csproj": {
+    "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/BreakingForce.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/diego/RiderProjects/BreakingForce/BreakingForce.API/BreakingForce.API.csproj",
+        "projectUniqueName": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/BreakingForce.API.csproj",
         "projectName": "BreakingForce.API",
-        "projectPath": "/home/diego/RiderProjects/BreakingForce/BreakingForce.API/BreakingForce.API.csproj",
-        "packagesPath": "/home/diego/.nuget/packages/",
-        "outputPath": "/home/diego/RiderProjects/BreakingForce/BreakingForce.API/obj/",
+        "projectPath": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/BreakingForce.API.csproj",
+        "packagesPath": "/home/diego-dev/.nuget/packages/",
+        "outputPath": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/diego/.nuget/NuGet/NuGet.Config"
+          "/home/diego-dev/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -95,14 +95,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/diego/RiderProjects/BreakingForce/Application/Application.csproj": {
-                "projectPath": "/home/diego/RiderProjects/BreakingForce/Application/Application.csproj"
+              "/home/diego-dev/RiderProjects/BreakingForce/Application/Application.csproj": {
+                "projectPath": "/home/diego-dev/RiderProjects/BreakingForce/Application/Application.csproj"
               },
-              "/home/diego/RiderProjects/BreakingForce/Infrastructure.Identity/Infrastructure.Identity.csproj": {
-                "projectPath": "/home/diego/RiderProjects/BreakingForce/Infrastructure.Identity/Infrastructure.Identity.csproj"
+              "/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/Infrastructure.Identity.csproj": {
+                "projectPath": "/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/Infrastructure.Identity.csproj"
               },
-              "/home/diego/RiderProjects/BreakingForce/Infrastructure.Persistence/Infrastructure.Persistence.csproj": {
-                "projectPath": "/home/diego/RiderProjects/BreakingForce/Infrastructure.Persistence/Infrastructure.Persistence.csproj"
+              "/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Persistence/Infrastructure.Persistence.csproj": {
+                "projectPath": "/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Persistence/Infrastructure.Persistence.csproj"
               }
             }
           }
@@ -120,6 +120,12 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -155,17 +161,76 @@
         }
       }
     },
-    "/home/diego/RiderProjects/BreakingForce/Infrastructure.Identity/Infrastructure.Identity.csproj": {
+    "/home/diego-dev/RiderProjects/BreakingForce/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/diego/RiderProjects/BreakingForce/Infrastructure.Identity/Infrastructure.Identity.csproj",
-        "projectName": "Infrastructure.Identity",
-        "projectPath": "/home/diego/RiderProjects/BreakingForce/Infrastructure.Identity/Infrastructure.Identity.csproj",
-        "packagesPath": "/home/diego/.nuget/packages/",
-        "outputPath": "/home/diego/RiderProjects/BreakingForce/Infrastructure.Identity/obj/",
+        "projectUniqueName": "/home/diego-dev/RiderProjects/BreakingForce/Domain/Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "/home/diego-dev/RiderProjects/BreakingForce/Domain/Domain.csproj",
+        "packagesPath": "/home/diego-dev/.nuget/packages/",
+        "outputPath": "/home/diego-dev/RiderProjects/BreakingForce/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/diego/.nuget/NuGet/NuGet.Config"
+          "/home/diego-dev/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.1, 8.0.1]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/Infrastructure.Identity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/Infrastructure.Identity.csproj",
+        "projectName": "Infrastructure.Identity",
+        "projectPath": "/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/Infrastructure.Identity.csproj",
+        "packagesPath": "/home/diego-dev/.nuget/packages/",
+        "outputPath": "/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/diego-dev/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -177,8 +242,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/diego/RiderProjects/BreakingForce/Application/Application.csproj": {
-                "projectPath": "/home/diego/RiderProjects/BreakingForce/Application/Application.csproj"
+              "/home/diego-dev/RiderProjects/BreakingForce/Application/Application.csproj": {
+                "projectPath": "/home/diego-dev/RiderProjects/BreakingForce/Application/Application.csproj"
               }
             }
           }
@@ -242,17 +307,17 @@
         }
       }
     },
-    "/home/diego/RiderProjects/BreakingForce/Infrastructure.Persistence/Infrastructure.Persistence.csproj": {
+    "/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Persistence/Infrastructure.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/diego/RiderProjects/BreakingForce/Infrastructure.Persistence/Infrastructure.Persistence.csproj",
+        "projectUniqueName": "/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Persistence/Infrastructure.Persistence.csproj",
         "projectName": "Infrastructure.Persistence",
-        "projectPath": "/home/diego/RiderProjects/BreakingForce/Infrastructure.Persistence/Infrastructure.Persistence.csproj",
-        "packagesPath": "/home/diego/.nuget/packages/",
-        "outputPath": "/home/diego/RiderProjects/BreakingForce/Infrastructure.Persistence/obj/",
+        "projectPath": "/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Persistence/Infrastructure.Persistence.csproj",
+        "packagesPath": "/home/diego-dev/.nuget/packages/",
+        "outputPath": "/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Persistence/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/diego/.nuget/NuGet/NuGet.Config"
+          "/home/diego-dev/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -264,8 +329,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/diego/RiderProjects/BreakingForce/Application/Application.csproj": {
-                "projectPath": "/home/diego/RiderProjects/BreakingForce/Application/Application.csproj"
+              "/home/diego-dev/RiderProjects/BreakingForce/Application/Application.csproj": {
+                "projectPath": "/home/diego-dev/RiderProjects/BreakingForce/Application/Application.csproj"
+              },
+              "/home/diego-dev/RiderProjects/BreakingForce/Domain/Domain.csproj": {
+                "projectPath": "/home/diego-dev/RiderProjects/BreakingForce/Domain/Domain.csproj"
               }
             }
           }
@@ -285,12 +353,6 @@
               "version": "[8.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[8.0.1, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.1, )"
             }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/diego/RiderProjects/BreakingForce/Application/Application.csproj": {}
+    "/home/diego-dev/RiderProjects/BreakingForce/Application/Application.csproj": {}
   },
   "projects": {
-    "/home/diego/RiderProjects/BreakingForce/Application/Application.csproj": {
+    "/home/diego-dev/RiderProjects/BreakingForce/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/diego/RiderProjects/BreakingForce/Application/Application.csproj",
+        "projectUniqueName": "/home/diego-dev/RiderProjects/BreakingForce/Application/Application.csproj",
         "projectName": "Application",
-        "projectPath": "/home/diego/RiderProjects/BreakingForce/Application/Application.csproj",
-        "packagesPath": "/home/diego/.nuget/packages/",
-        "outputPath": "/home/diego/RiderProjects/BreakingForce/Application/obj/",
+        "projectPath": "/home/diego-dev/RiderProjects/BreakingForce/Application/Application.csproj",
+        "packagesPath": "/home/diego-dev/.nuget/packages/",
+        "outputPath": "/home/diego-dev/RiderProjects/BreakingForce/Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/diego/.nuget/NuGet/NuGet.Config"
+          "/home/diego-dev/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

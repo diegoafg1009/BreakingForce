@@ -3,11 +3,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Persistence.Data;
 
-public class UnitOfWork(DbContext context) : IUnitOfWork
+public class UnitOfWork(ApplicationContext context) : IUnitOfWork
 {
+    private readonly ApplicationContext _context = context;
+
     public async Task CommitAsync()
     {
-        await context.SaveChangesAsync();
+        await _context.SaveChangesAsync();
     }
 
     private bool _disposed;
@@ -18,9 +20,10 @@ public class UnitOfWork(DbContext context) : IUnitOfWork
         {
             if (disposing)
             {
-                context.Dispose();
+                _context.Dispose();
             }
         }
+
         _disposed = true;
     }
 
