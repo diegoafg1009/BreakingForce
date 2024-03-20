@@ -12,7 +12,7 @@ public class OrderDetailConfiguration : IEntityTypeConfiguration<OrderDetail>
         builder.ToTable("OrderDetails");
 
         //Primary Key
-        builder.HasKey(od => new { od.OrderId, od.ProductId });
+        builder.HasKey(od => new { od.OrderId, od.ProductVariationId });
 
         //Properties
         builder.Property(od => od.Quantity)
@@ -40,9 +40,9 @@ public class OrderDetailConfiguration : IEntityTypeConfiguration<OrderDetail>
             .HasForeignKey(od => od.OrderId)
             .IsRequired();
 
-        builder.HasOne(od => od.Product)
+        builder.HasOne(od => od.ProductVariation)
             .WithMany(p => p.OrderDetails)
-            .HasForeignKey(od => od.ProductId)
+            .HasForeignKey(od => od.ProductVariationId)
             .IsRequired();
     }
 }

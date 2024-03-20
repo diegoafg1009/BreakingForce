@@ -9,5 +9,6 @@ public interface IGenericRepository<T> where T : class
     Task<T?> GetByIdAsync(Guid id);
     Task<IEnumerable<T>> GetAllAsync();
     Task<int> CountAsync(Expression<Func<T, bool>>? predicate);
+    Task<IEnumerable<T>> GetWithFilterAsync(Expression<Func<T, bool>> predicate);
 }
 

@@ -1,4 +1,6 @@
 using System.Reflection;
+using Application.Services.Implementations;
+using Application.Services.Interfaces;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -10,6 +12,17 @@ public static class ApplicationServicesExtension
     {
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+
+        #region Services
+
+        services.AddScoped<IBrandService, BrandService>();
+        services.AddScoped<ICategoryService, CategoryService>();
+        services.AddScoped<IFlavorService, FlavorService>();
+        services.AddScoped<IObjectiveService, ObjectiveService>();
+        services.AddScoped<IProductService, ProductService>();
+        services.AddScoped<ISubcategoryService, SubcategoryService>();
+
+        #endregion
 
         return services;
     }

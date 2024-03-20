@@ -12,6 +12,10 @@ public class Shipment : BaseModel
     public Province Province { get; set; } = null!;
     public Guid DepartmentId { get; set; }
     public Department Department { get; set; } = null!;
+    public Guid DeliveryMethodId { get; set; }
+    public DeliveryMethod DeliveryMethod { get; set; } = null!;
+    public Guid ShipmentStatusId { get; set; }
+    public ShipmentStatus ShipmentStatus { get; set; } = null!;
     public Guid OrderId { get; set; }
     public Order Order { get; set; } = null!;
 }

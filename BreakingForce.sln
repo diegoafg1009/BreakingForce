@@ -8,8 +8,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BreakingForce", "BreakingFo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreakingForce.API", "BreakingForce.API\BreakingForce.API.csproj", "{50FAD1EA-7DC2-48C9-9225-6B02255AFB0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreakingForce.Intranet", "BreakingForce.Intranet\BreakingForce.Intranet.csproj", "{A05CDE5B-4555-4EBA-ACDF-949A1F3960B8}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{C9DBF38B-8DDF-46CB-9245-0A0029F32E79}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{4D27860E-772B-48A3-941A-6E9888450CEC}"
@@ -18,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Identity", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Persistence", "Infrastructure.Persistence\Infrastructure.Persistence.csproj", "{F4E7ABC8-9755-41F8-992A-3D210DEC26DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.ExternalServices", "Infrastructure.ExternalServices\Infrastructure.ExternalServices.csproj", "{A9F2AC56-82CC-442C-AE86-D3556186BBF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,21 +25,17 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{50FAD1EA-7DC2-48C9-9225-6B02255AFB0B} = {6CF04BB4-8B6C-4AF7-9A31-33BBB52852C4}
-		{A05CDE5B-4555-4EBA-ACDF-949A1F3960B8} = {6CF04BB4-8B6C-4AF7-9A31-33BBB52852C4}
 		{C9DBF38B-8DDF-46CB-9245-0A0029F32E79} = {898ABD4E-5EAB-43C0-B452-43409A1F6AC9}
 		{4D27860E-772B-48A3-941A-6E9888450CEC} = {898ABD4E-5EAB-43C0-B452-43409A1F6AC9}
 		{A7BF1F3C-0C42-4614-B956-F6C82B15953D} = {B64F6E30-FF2D-439D-B092-59463653777D}
 		{F4E7ABC8-9755-41F8-992A-3D210DEC26DC} = {B64F6E30-FF2D-439D-B092-59463653777D}
+		{A9F2AC56-82CC-442C-AE86-D3556186BBF5} = {B64F6E30-FF2D-439D-B092-59463653777D}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{50FAD1EA-7DC2-48C9-9225-6B02255AFB0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{50FAD1EA-7DC2-48C9-9225-6B02255AFB0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50FAD1EA-7DC2-48C9-9225-6B02255AFB0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50FAD1EA-7DC2-48C9-9225-6B02255AFB0B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A05CDE5B-4555-4EBA-ACDF-949A1F3960B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A05CDE5B-4555-4EBA-ACDF-949A1F3960B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A05CDE5B-4555-4EBA-ACDF-949A1F3960B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A05CDE5B-4555-4EBA-ACDF-949A1F3960B8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C9DBF38B-8DDF-46CB-9245-0A0029F32E79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C9DBF38B-8DDF-46CB-9245-0A0029F32E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9DBF38B-8DDF-46CB-9245-0A0029F32E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -56,5 +52,9 @@ Global
 		{F4E7ABC8-9755-41F8-992A-3D210DEC26DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4E7ABC8-9755-41F8-992A-3D210DEC26DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4E7ABC8-9755-41F8-992A-3D210DEC26DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9F2AC56-82CC-442C-AE86-D3556186BBF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9F2AC56-82CC-442C-AE86-D3556186BBF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9F2AC56-82CC-442C-AE86-D3556186BBF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9F2AC56-82CC-442C-AE86-D3556186BBF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

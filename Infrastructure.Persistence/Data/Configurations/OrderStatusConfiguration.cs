@@ -1,4 +1,5 @@
 using Domain.Entities;
+using Infrastructure.Persistence.Data.Seeds;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -28,5 +29,8 @@ public class OrderStatusConfiguration : IEntityTypeConfiguration<OrderStatus>
             .WithOne(o => o.OrderStatus)
             .HasForeignKey(o => o.OrderStatusId)
             .IsRequired();
+
+        //Seed Data
+        builder.HasData(DefaultOrderStatuses.Seed());
     }
 }

@@ -1,5 +1,8 @@
+using System.Reflection;
 using Application;
+using BreakingForce.API.Endpoints;
 using BreakingForce.API.Middlewares;
+using Infrastructure.ExternalServices;
 using Infrastructure.Identity;
 using Infrastructure.Persistence;
 using Microsoft.OpenApi.Models;
@@ -45,6 +48,7 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddApplicationServices();
 builder.Services.AddIdentityServices(builder.Configuration);
 builder.Services.AddPersistenceServices(builder.Configuration);
+builder.Services.AddExternalServices(builder.Configuration, builder.Environment);
 
 #endregion
 
@@ -59,12 +63,15 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod();
     });
 });
-
 #endregion
+
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+app.UseMiddleware<ExceptionMiddleware>();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -73,32 +80,19 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseMiddleware<ExceptionMiddleware>();
-
 app.UseAuthentication();
-app.UseAuthorization();
+//app.UseAuthorization();
 
 app.UseCors();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+var api = app.MapGroup("/api");
+api.MapGroup("/brands").MapBrands();
+api.MapGroup("/categories").MapCategories();
+api.MapGroup("/flavors").MapFlavors();
+api.MapGroup("/objectives").MapObjectives();
+api.MapGroup("/products").MapProducts();
+api.MapGroup("/subcategories").MapSubcategories();
 
-app.MapGet("/weatherforecast", () =>
-    {
-        var forecast = Enumerable.Range(1, 5).Select(index =>
-                new WeatherForecast
-                (
-                    DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                    Random.Shared.Next(-20, 55),
-                    summaries[Random.Shared.Next(summaries.Length)]
-                ))
-            .ToArray();
-        return forecast;
-    })
-    .WithName("GetWeatherForecast")
-    .WithOpenApi();
 
 app.Run();
 

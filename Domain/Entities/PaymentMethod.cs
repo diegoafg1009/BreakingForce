@@ -5,5 +5,6 @@ namespace Domain.Entities;
 public class PaymentMethod : BaseModel
 {
     public string Name { get; set; } = null!;
-    public List<Order> Orders { get; set; } = [];
+    public bool IsActive { get; set; }
+    public List<Payment> Payments { get; set; } = [];
 }

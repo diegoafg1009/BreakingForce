@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/wwwroot/images/brands/90f93595-f9bd-490c-a2f1-cecbd287c503.webp",
+      "PackagePath": "staticwebassets/images/brands/90f93595-f9bd-490c-a2f1-cecbd287c503.webp"
+    },
+    {
+      "Id": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/wwwroot/images/brands/b81614f6-67c6-40ed-a326-b33ebc85f28e.webp",
+      "PackagePath": "staticwebassets/images/brands/b81614f6-67c6-40ed-a326-b33ebc85f28e.webp"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.BreakingForce.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.BreakingForce.API.props",
+      "PackagePath": "build\\BreakingForce.API.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.BreakingForce.API.props",
+      "PackagePath": "buildMultiTargeting\\BreakingForce.API.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.BreakingForce.API.props",
+      "PackagePath": "buildTransitive\\BreakingForce.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

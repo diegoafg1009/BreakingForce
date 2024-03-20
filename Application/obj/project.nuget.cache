@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lNp60KvfdFpoD2jnVCd1lStrUGTaNXqEZQg6vC2SnIMqxKH31p8M6o2TIIu5P5j1p4J3HQsHfOjKzFrAHDrdcA==",
+  "dgSpecHash": "gUt2DdtUXmFyeKIxxvCvg0b1xqGRkHAnD+2iVP4/a3DXfWuetr5lSIKrmDXa5P+XxF7Y4Oq/u/qQFFm38jEWPQ==",
   "success": true,
   "projectFilePath": "/home/diego-dev/RiderProjects/BreakingForce/Application/Application.csproj",
   "expectedPackageFiles": [
@@ -13,7 +13,7 @@
     "/home/diego-dev/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
     "/home/diego-dev/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "/home/diego-dev/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "/home/diego-dev/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.1/microsoft.aspnetcore.app.ref.8.0.1.nupkg.sha512"
+    "/home/diego-dev/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.3/microsoft.aspnetcore.app.ref.8.0.3.nupkg.sha512"
   ],
   "logs": []
 }

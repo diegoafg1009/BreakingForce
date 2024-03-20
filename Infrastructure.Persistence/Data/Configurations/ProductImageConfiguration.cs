@@ -20,7 +20,6 @@ public class ProductImageConfiguration : IEntityTypeConfiguration<ProductImage>
             .IsRequired();
 
         builder.Property(pi => pi.Url)
-            .HasMaxLength(500)
             .IsRequired();
 
         //Relationships

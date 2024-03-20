@@ -12,10 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Contracts\" />
-      <Folder Include="Enums\" />
-      <Folder Include="Factories\" />
-      <Folder Include="Mappings\" />
+      <ProjectReference Include="..\Domain\Domain.csproj" />
     </ItemGroup>
 
 </Project>

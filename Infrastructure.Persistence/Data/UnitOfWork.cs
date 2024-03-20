@@ -1,15 +1,21 @@
 using Application.Repositories;
+using Infrastructure.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Persistence.Data;
 
 public class UnitOfWork(ApplicationContext context) : IUnitOfWork
 {
-    private readonly ApplicationContext _context = context;
+    public IBrandRepository Brands { get; } = new BrandRepository(context);
+    public ICategoryRepository Categories { get; } = new CategoryRepository(context);
+    public IFlavorRepository Flavors { get; } = new FlavorRepository(context);
+    public IObjectiveRepository Objectives { get; } = new ObjectiveRepository(context);
+    public IProductRepository Products { get; } = new ProductRepository(context);
+    public ISubcategoryRepository Subcategories { get; } = new SubcategoryRepository(context);
 
     public async Task CommitAsync()
     {
-        await _context.SaveChangesAsync();
+        await context.SaveChangesAsync();
     }
 
     private bool _disposed;
@@ -20,7 +26,7 @@ public class UnitOfWork(ApplicationContext context) : IUnitOfWork
         {
             if (disposing)
             {
-                _context.Dispose();
+                context.Dispose();
             }
         }
 

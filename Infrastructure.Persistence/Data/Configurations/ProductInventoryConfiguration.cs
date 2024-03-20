@@ -23,9 +23,9 @@ public class ProductInventoryConfiguration : IEntityTypeConfiguration<ProductInv
             .IsRequired();
 
         //Relationships
-        builder.HasOne(pi => pi.Product)
-            .WithOne(p => p.Inventory)
-            .HasForeignKey<ProductInventory>(pi => pi.Id)
+        builder.HasOne(pi => pi.ProductVariation)
+            .WithOne(pv => pv.Inventory)
+            .HasForeignKey<ProductVariation>(pv => pv.InventoryId)
             .IsRequired();
     }
 }

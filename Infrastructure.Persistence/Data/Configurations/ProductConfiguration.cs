@@ -27,14 +27,14 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
             .HasMaxLength(500)
             .IsRequired();
 
-        builder.Property(p => p.UnitPrice)
-            .HasColumnType("decimal(18,2)")
+        builder.Property(p => p.IsActive)
+            .HasDefaultValue(true)
             .IsRequired();
 
         //Relationships
-        builder.HasOne(p => p.Category)
+        builder.HasOne(p => p.Subcategory)
             .WithMany(ps => ps.Products)
-            .HasForeignKey(p => p.CategoryId)
+            .HasForeignKey(p => p.SubcategoryId)
             .IsRequired();
 
         builder.HasOne(p => p.Objective)
@@ -47,19 +47,14 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
             .HasForeignKey(p => p.BrandId)
             .IsRequired();
 
-        builder.HasOne(p => p.Inventory)
-            .WithOne(i => i.Product)
-            .HasForeignKey<Product>(p => p.InventoryId)
-            .IsRequired();
-
         builder.HasMany(p => p.Images)
             .WithOne(pi => pi.Product)
             .HasForeignKey(pi => pi.ProductId)
             .IsRequired();
 
-        builder.HasMany(p => p.OrderDetails)
-            .WithOne(od => od.Product)
-            .HasForeignKey(od => od.ProductId)
+        builder.HasMany(p => p.Variations)
+            .WithOne(pv => pv.Product)
+            .HasForeignKey(pv => pv.ProductId)
             .IsRequired();
     }
 }

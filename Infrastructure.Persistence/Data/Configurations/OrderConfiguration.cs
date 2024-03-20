@@ -49,14 +49,9 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
             .HasForeignKey(o => o.OrderStatusId)
             .IsRequired();
 
-        builder.HasOne(o => o.PaymentMethod)
-            .WithMany(pm => pm.Orders)
-            .HasForeignKey(o => o.PaymentMethodId)
-            .IsRequired();
-
-        builder.HasOne(o => o.DeliveryMethod)
-            .WithMany(dm => dm.Orders)
-            .HasForeignKey(o => o.DeliveryMethodId)
+        builder.HasOne(o => o.Payment)
+            .WithOne(p => p.Order)
+            .HasForeignKey<Payment>(p => p.OrderId)
             .IsRequired();
 
         builder.HasOne(o => o.Shipment)

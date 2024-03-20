@@ -1,12 +1,15 @@
 /home/diego-dev/RiderProjects/BreakingForce/Application/bin/Debug/net8.0/Application.deps.json
 /home/diego-dev/RiderProjects/BreakingForce/Application/bin/Debug/net8.0/Application.dll
 /home/diego-dev/RiderProjects/BreakingForce/Application/bin/Debug/net8.0/Application.pdb
+/home/diego-dev/RiderProjects/BreakingForce/Application/bin/Debug/net8.0/Domain.dll
+/home/diego-dev/RiderProjects/BreakingForce/Application/bin/Debug/net8.0/Domain.pdb
 /home/diego-dev/RiderProjects/BreakingForce/Application/obj/Debug/net8.0/Application.csproj.AssemblyReference.cache
 /home/diego-dev/RiderProjects/BreakingForce/Application/obj/Debug/net8.0/Application.GeneratedMSBuildEditorConfig.editorconfig
 /home/diego-dev/RiderProjects/BreakingForce/Application/obj/Debug/net8.0/Application.AssemblyInfoInputs.cache
 /home/diego-dev/RiderProjects/BreakingForce/Application/obj/Debug/net8.0/Application.AssemblyInfo.cs
 /home/diego-dev/RiderProjects/BreakingForce/Application/obj/Debug/net8.0/Application.csproj.CoreCompileInputs.cache
 /home/diego-dev/RiderProjects/BreakingForce/Application/obj/Debug/net8.0/Application.sourcelink.json
+/home/diego-dev/RiderProjects/BreakingForce/Application/obj/Debug/net8.0/Applicat.44B5EDA2.Up2Date
 /home/diego-dev/RiderProjects/BreakingForce/Application/obj/Debug/net8.0/Application.dll
 /home/diego-dev/RiderProjects/BreakingForce/Application/obj/Debug/net8.0/refint/Application.dll
 /home/diego-dev/RiderProjects/BreakingForce/Application/obj/Debug/net8.0/Application.pdb

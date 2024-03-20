@@ -13,10 +13,8 @@ public class Order : BaseModel
     public List<OrderDetail> OrderDetails { get; set; } = [];
     public Guid OrderStatusId { get; set; }
     public OrderStatus OrderStatus { get; set; } = null!;
-    public Guid PaymentMethodId { get; set; }
-    public PaymentMethod PaymentMethod { get; set; } = null!;
-    public Guid DeliveryMethodId { get; set; }
-    public DeliveryMethod DeliveryMethod { get; set; } = null!;
+    public Guid PaymentId { get; set; }
+    public Payment Payment { get; set; } = null!;
     public Guid? ShipmentId { get; set; }
     public Shipment? Shipment { get; set; }
     public Guid? CouponId { get; set; }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rDIzcxgSOMPRY5KxUTsjgC3moRhckmEemFEKOumytZmQ2+YuDHuRjKXAWupzLqO/LwHoutXvbShN9add4LHqNg==",
+  "dgSpecHash": "v2l9piZOSKwayunetyk3KsVc34xTQfb5zoeXuDfzt1U9/gMn9y/GcDXgNuuTgBgH5NosQEQ5fcPgCFfJ9IvM+A==",
   "success": true,
   "projectFilePath": "/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Persistence/Infrastructure.Persistence.csproj",
   "expectedPackageFiles": [
@@ -62,7 +62,7 @@
     "/home/diego-dev/.nuget/packages/system.text.json/4.7.2/system.text.json.4.7.2.nupkg.sha512",
     "/home/diego-dev/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "/home/diego-dev/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512",
-    "/home/diego-dev/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.1/microsoft.aspnetcore.app.ref.8.0.1.nupkg.sha512"
+    "/home/diego-dev/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.3/microsoft.aspnetcore.app.ref.8.0.3.nupkg.sha512"
   ],
   "logs": []
 }

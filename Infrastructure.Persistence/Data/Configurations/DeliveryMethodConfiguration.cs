@@ -28,9 +28,9 @@ public class DeliveryMethodConfiguration : IEntityTypeConfiguration<DeliveryMeth
             .IsRequired();
 
         //Relationships
-        builder.HasMany(dm => dm.Orders)
-            .WithOne(o => o.DeliveryMethod)
-            .HasForeignKey(o => o.DeliveryMethodId)
+        builder.HasMany(dm => dm.Shipments)
+            .WithOne(s => s.DeliveryMethod)
+            .HasForeignKey(s => s.DeliveryMethodId)
             .IsRequired();
     }
 }

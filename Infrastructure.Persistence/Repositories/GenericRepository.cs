@@ -51,4 +51,9 @@ public class GenericRepository<T> : IGenericRepository <T> where T : class
 
         return await DbSet.CountAsync(predicate);
     }
+
+    public async Task<IEnumerable<T>> GetWithFilterAsync(Expression<Func<T, bool>> predicate)
+    {
+        return await Task.Run(() => DbSet.Where(predicate).AsEnumerable());
+    }
 }

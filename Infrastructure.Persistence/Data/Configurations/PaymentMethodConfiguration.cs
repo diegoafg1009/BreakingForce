@@ -23,10 +23,13 @@ public class PaymentMethodConfiguration : IEntityTypeConfiguration<PaymentMethod
             .HasMaxLength(50)
             .IsRequired();
 
+        builder.Property(pm => pm.IsActive)
+            .IsRequired();
+
         //Relationships
-        builder.HasMany(pm => pm.Orders)
-            .WithOne(o => o.PaymentMethod)
-            .HasForeignKey(o => o.PaymentMethodId)
+        builder.HasMany(pm => pm.Payments)
+            .WithOne(p => p.PaymentMethod)
+            .HasForeignKey(p => p.PaymentMethodId)
             .IsRequired();
     }
 }

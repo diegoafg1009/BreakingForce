@@ -1,0 +1,209 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.ExternalServices/Infrastructure.ExternalServices.csproj": {}
+  },
+  "projects": {
+    "/home/diego-dev/RiderProjects/BreakingForce/Application/Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/diego-dev/RiderProjects/BreakingForce/Application/Application.csproj",
+        "projectName": "Application",
+        "projectPath": "/home/diego-dev/RiderProjects/BreakingForce/Application/Application.csproj",
+        "packagesPath": "/home/diego-dev/.nuget/packages/",
+        "outputPath": "/home/diego-dev/RiderProjects/BreakingForce/Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/diego-dev/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/diego-dev/RiderProjects/BreakingForce/Domain/Domain.csproj": {
+                "projectPath": "/home/diego-dev/RiderProjects/BreakingForce/Domain/Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.3, 8.0.3]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/diego-dev/RiderProjects/BreakingForce/Domain/Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/diego-dev/RiderProjects/BreakingForce/Domain/Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "/home/diego-dev/RiderProjects/BreakingForce/Domain/Domain.csproj",
+        "packagesPath": "/home/diego-dev/.nuget/packages/",
+        "outputPath": "/home/diego-dev/RiderProjects/BreakingForce/Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/diego-dev/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.3, 8.0.3]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.ExternalServices/Infrastructure.ExternalServices.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.ExternalServices/Infrastructure.ExternalServices.csproj",
+        "projectName": "Infrastructure.ExternalServices",
+        "projectPath": "/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.ExternalServices/Infrastructure.ExternalServices.csproj",
+        "packagesPath": "/home/diego-dev/.nuget/packages/",
+        "outputPath": "/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.ExternalServices/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/diego-dev/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/diego-dev/RiderProjects/BreakingForce/Application/Application.csproj": {
+                "projectPath": "/home/diego-dev/RiderProjects/BreakingForce/Application/Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "mercadopago-sdk": {
+              "target": "Package",
+              "version": "[2.3.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.3, 8.0.3]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

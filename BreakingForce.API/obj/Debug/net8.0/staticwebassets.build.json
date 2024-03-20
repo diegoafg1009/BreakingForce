@@ -1,11 +1,58 @@
 {
   "Version": 1,
-  "Hash": "Pz0ZKWAuEm/tG/buvSny+zSWG/3dypSM08Cib+YvUSo=",
+  "Hash": "ccATKVxPzFVwV+YCwAUU2cOcis6b8AoxmkWoqI8+LKg=",
   "Source": "BreakingForce.API",
   "BasePath": "_content/BreakingForce.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "BreakingForce.API/wwwroot",
+      "Source": "BreakingForce.API",
+      "ContentRoot": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/wwwroot/",
+      "BasePath": "_content/BreakingForce.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/wwwroot/images/brands/90f93595-f9bd-490c-a2f1-cecbd287c503.webp",
+      "SourceId": "BreakingForce.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/wwwroot/",
+      "BasePath": "_content/BreakingForce.API",
+      "RelativePath": "images/brands/90f93595-f9bd-490c-a2f1-cecbd287c503.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/brands/90f93595-f9bd-490c-a2f1-cecbd287c503.webp"
+    },
+    {
+      "Identity": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/wwwroot/images/brands/b81614f6-67c6-40ed-a326-b33ebc85f28e.webp",
+      "SourceId": "BreakingForce.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/wwwroot/",
+      "BasePath": "_content/BreakingForce.API",
+      "RelativePath": "images/brands/b81614f6-67c6-40ed-a326-b33ebc85f28e.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/brands/b81614f6-67c6-40ed-a326-b33ebc85f28e.webp"
+    }
+  ]
 }

@@ -3,14 +3,16 @@
 /home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/bin/Debug/net8.0/Infrastructure.Identity.dll
 /home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/bin/Debug/net8.0/Infrastructure.Identity.pdb
 /home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/bin/Debug/net8.0/Application.dll
+/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/bin/Debug/net8.0/Domain.dll
 /home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/bin/Debug/net8.0/Application.pdb
+/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/bin/Debug/net8.0/Domain.pdb
 /home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/obj/Debug/net8.0/Infrastructure.Identity.csproj.AssemblyReference.cache
 /home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/obj/Debug/net8.0/Infrastructure.Identity.GeneratedMSBuildEditorConfig.editorconfig
 /home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/obj/Debug/net8.0/Infrastructure.Identity.AssemblyInfoInputs.cache
 /home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/obj/Debug/net8.0/Infrastructure.Identity.AssemblyInfo.cs
 /home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/obj/Debug/net8.0/Infrastructure.Identity.csproj.CoreCompileInputs.cache
 /home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/obj/Debug/net8.0/Infrastructure.Identity.sourcelink.json
-/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/obj/Debug/net8.0/Infrastructure.Identity.csproj.CopyComplete
+/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/obj/Debug/net8.0/Infrastr.1C2BEB3C.Up2Date
 /home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/obj/Debug/net8.0/Infrastructure.Identity.dll
 /home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/obj/Debug/net8.0/refint/Infrastructure.Identity.dll
 /home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Identity/obj/Debug/net8.0/Infrastructure.Identity.pdb

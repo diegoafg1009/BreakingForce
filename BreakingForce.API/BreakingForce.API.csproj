@@ -19,8 +19,14 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Application\Application.csproj" />
+      <ProjectReference Include="..\Infrastructure.ExternalServices\Infrastructure.ExternalServices.csproj" />
       <ProjectReference Include="..\Infrastructure.Identity\Infrastructure.Identity.csproj" />
       <ProjectReference Include="..\Infrastructure.Persistence\Infrastructure.Persistence.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\images\brands\" />
+      <Folder Include="wwwroot\images\products\" />
     </ItemGroup>
 
 </Project>

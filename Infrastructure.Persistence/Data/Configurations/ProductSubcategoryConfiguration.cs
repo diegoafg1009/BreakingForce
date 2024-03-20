@@ -34,7 +34,7 @@ public class ProductSubcategoryConfiguration : IEntityTypeConfiguration<ProductS
             .IsRequired();
 
         builder.HasMany(ps => ps.Products)
-            .WithOne(p => p.Category)
-            .HasForeignKey(p => p.CategoryId);
+            .WithOne(p => p.Subcategory)
+            .HasForeignKey(p => p.SubcategoryId);
     }
 }
