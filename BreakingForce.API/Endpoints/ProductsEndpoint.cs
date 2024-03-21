@@ -1,6 +1,7 @@
 using Application.Contracts.Product.DTOs;
 using Application.Services.Interfaces;
 using AutoMapper;
+using Domain.Entities;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,12 +16,12 @@ public static class ProductsEndpoint
         return group;
     }
 
-    private static string CreateProduct(HttpRequest request, [FromServices] IProductService productService, IMapper mapper)
+    private static async Task<Created<GetProductDto>> CreateProduct(HttpRequest request, [FromServices] IProductService productService, IMapper mapper)
     {
-        var form = request.Form;
-        Console.WriteLine(form["variations"]);
-        var createdProduct = mapper.Map<CreateProductDto>(request.Form);
-        return "Product";
+        var createdProduct = mapper.Map<CreateProductDto>(request.Form)!;
+        var product = await productService.CreateProduct(createdProduct, Guid.Empty);
+
+        return TypedResults.Created((string?)null, product);
     }
 
     private static async Task<Ok<List<GetProductSimpleDto>>> FilterProducts([AsParameters] ProductFilterDto filterDto,

@@ -22,6 +22,9 @@ public class ProductImageConfiguration : IEntityTypeConfiguration<ProductImage>
         builder.Property(pi => pi.Url)
             .IsRequired();
 
+        builder.Property(pi => pi.Order)
+            .IsRequired();
+
         //Relationships
         builder.HasOne(pi => pi.Product)
             .WithMany(p => p.Images)

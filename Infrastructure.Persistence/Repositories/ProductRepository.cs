@@ -17,7 +17,10 @@ public class ProductRepository(ApplicationContext context) : GenericRepository<P
             .Include(x => x.Brand)
             .Include(x => x.Objective)
             .Include(x => x.Images)
+            .Include(x => x.Variations)
+            .ThenInclude(y => y.ProductInventory)
             .AsQueryable();
+
 
         if (!string.IsNullOrWhiteSpace(filterDto.Search))
         {

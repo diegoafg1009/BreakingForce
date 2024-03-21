@@ -673,6 +673,9 @@ namespace Infrastructure.Persistence.Data.Migrations
                         .HasColumnType("uniqueidentifier")
                         .HasDefaultValueSql("NEWID()");
 
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
                     b.Property<Guid>("ProductId")
                         .HasColumnType("uniqueidentifier");
 
@@ -694,16 +697,10 @@ namespace Infrastructure.Persistence.Data.Migrations
                         .HasColumnType("uniqueidentifier")
                         .HasDefaultValueSql("NEWID()");
 
-                    b.Property<Guid>("ProductVariationId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ProductVariationId")
-                        .IsUnique();
 
                     b.ToTable("ProductInventories", "dbo");
                 });
@@ -763,10 +760,7 @@ namespace Infrastructure.Persistence.Data.Migrations
                         .HasColumnType("uniqueidentifier")
                         .HasDefaultValueSql("NEWID()");
 
-                    b.Property<Guid>("FlavorId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("InventoryId")
+                    b.Property<Guid?>("FlavorId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("IsActive")
@@ -775,6 +769,9 @@ namespace Infrastructure.Persistence.Data.Migrations
                         .HasDefaultValue(true);
 
                     b.Property<Guid>("ProductId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ProductInventoryId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("UnitPrice")
@@ -788,6 +785,9 @@ namespace Infrastructure.Persistence.Data.Migrations
                     b.HasIndex("FlavorId");
 
                     b.HasIndex("ProductId");
+
+                    b.HasIndex("ProductInventoryId")
+                        .IsUnique();
 
                     b.ToTable("ProductVariations", "dbo");
                 });
@@ -972,6 +972,18 @@ namespace Infrastructure.Persistence.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TransactionTypes", "dbo");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("56626b64-485b-458a-99fb-cdb5b635526e"),
+                            Name = "Creation"
+                        },
+                        new
+                        {
+                            Id = new Guid("922ff6a9-ad99-4b78-8826-fc2136829e53"),
+                            Name = "Update"
+                        });
                 });
 
             modelBuilder.Entity("Domain.Entities.Address", b =>
@@ -1165,17 +1177,6 @@ namespace Infrastructure.Persistence.Data.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("Domain.Entities.ProductInventory", b =>
-                {
-                    b.HasOne("Domain.Entities.ProductVariation", "ProductVariation")
-                        .WithOne("Inventory")
-                        .HasForeignKey("Domain.Entities.ProductInventory", "ProductVariationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ProductVariation");
-                });
-
             modelBuilder.Entity("Domain.Entities.ProductSubcategory", b =>
                 {
                     b.HasOne("Domain.Entities.ProductCategory", "Category")
@@ -1191,9 +1192,7 @@ namespace Infrastructure.Persistence.Data.Migrations
                 {
                     b.HasOne("Domain.Entities.ProductFlavor", "Flavor")
                         .WithMany("ProductsVariations")
-                        .HasForeignKey("FlavorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("FlavorId");
 
                     b.HasOne("Domain.Entities.Product", "Product")
                         .WithMany("Variations")
@@ -1201,9 +1200,17 @@ namespace Infrastructure.Persistence.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Domain.Entities.ProductInventory", "ProductInventory")
+                        .WithOne("ProductVariation")
+                        .HasForeignKey("Domain.Entities.ProductVariation", "ProductInventoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Flavor");
 
                     b.Navigation("Product");
+
+                    b.Navigation("ProductInventory");
                 });
 
             modelBuilder.Entity("Domain.Entities.Province", b =>
@@ -1387,6 +1394,9 @@ namespace Infrastructure.Persistence.Data.Migrations
 
             modelBuilder.Entity("Domain.Entities.ProductInventory", b =>
                 {
+                    b.Navigation("ProductVariation")
+                        .IsRequired();
+
                     b.Navigation("TransactionDetails");
                 });
 
@@ -1402,9 +1412,6 @@ namespace Infrastructure.Persistence.Data.Migrations
 
             modelBuilder.Entity("Domain.Entities.ProductVariation", b =>
                 {
-                    b.Navigation("Inventory")
-                        .IsRequired();
-
                     b.Navigation("OrderDetails");
                 });
 

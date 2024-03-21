@@ -6,5 +6,5 @@ public class CreateVariation
     public decimal UnitPrice { get; set; }
     public decimal Weight { get; set; }
     public int Stock { get; set; }
-    public Guid FlavorId { get; set; }
+    public Guid? FlavorId { get; set; }
 }

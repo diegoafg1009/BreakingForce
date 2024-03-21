@@ -9,6 +9,14 @@
       "PackagePath": "staticwebassets/images/brands/b81614f6-67c6-40ed-a326-b33ebc85f28e.webp"
     },
     {
+      "Id": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/wwwroot/images/products/138b12cc-57be-4b13-821a-1730ce8c3a9a.webp",
+      "PackagePath": "staticwebassets/images/products/138b12cc-57be-4b13-821a-1730ce8c3a9a.webp"
+    },
+    {
+      "Id": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/wwwroot/images/products/8f18f5cd-db4f-4d87-aab2-ff00a6bdeb71.webp",
+      "PackagePath": "staticwebassets/images/products/8f18f5cd-db4f-4d87-aab2-ff00a6bdeb71.webp"
+    },
+    {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.BreakingForce.API.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

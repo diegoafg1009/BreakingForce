@@ -83,6 +83,8 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 //app.UseAuthorization();
 
+app.UseStaticFiles();
+
 app.UseCors();
 
 var api = app.MapGroup("/api");
@@ -95,8 +97,3 @@ api.MapGroup("/subcategories").MapSubcategories();
 
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}

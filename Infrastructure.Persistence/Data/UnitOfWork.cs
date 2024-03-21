@@ -12,6 +12,7 @@ public class UnitOfWork(ApplicationContext context) : IUnitOfWork
     public IObjectiveRepository Objectives { get; } = new ObjectiveRepository(context);
     public IProductRepository Products { get; } = new ProductRepository(context);
     public ISubcategoryRepository Subcategories { get; } = new SubcategoryRepository(context);
+    public ITransactionRepository Transactions { get; } = new TransactionRepository(context);
 
     public async Task CommitAsync()
     {

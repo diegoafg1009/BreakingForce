@@ -29,7 +29,6 @@ public class ProductFlavorConfiguration : IEntityTypeConfiguration<ProductFlavor
         //Relationships
         builder.HasMany(pf => pf.ProductsVariations)
             .WithOne( pv=> pv.Flavor)
-            .HasForeignKey(pv => pv.FlavorId)
-            .IsRequired();
+            .HasForeignKey(pv => pv.FlavorId);
     }
 }

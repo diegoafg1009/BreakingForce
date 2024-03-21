@@ -16,7 +16,7 @@ public class GetProductDto
     public string Objective { get; set; } = null!;
     public Guid BrandId { get; set; }
     public string Brand { get; set; } = null!;
-    public string Image { get; set; } = null!;
+    public List<string> Images { get; set; } = null!;
     public bool IsActive { get; set; }
     public List<GetVariationDto> Variations { get; set; } = null!;
 }

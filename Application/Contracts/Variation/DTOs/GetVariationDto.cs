@@ -7,6 +7,6 @@ public class GetVariationDto
     public decimal Weight { get; set; }
     public int Stock { get; set; }
     public bool IsActive { get; set; }
-    public string FlavorName { get; set; } = null!;
-    public string FlavorColor { get; set; } = null!;
+    public string? FlavorName { get; set; }
+    public string? FlavorColor { get; set; }
 }

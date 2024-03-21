@@ -39,12 +39,11 @@ public class ProductVariationConfiguration : IEntityTypeConfiguration<ProductVar
 
         builder.HasOne(pv => pv.Flavor)
             .WithMany(pf => pf.ProductsVariations)
-            .HasForeignKey(pv => pv.FlavorId)
-            .IsRequired();
+            .HasForeignKey(pv => pv.FlavorId);
 
-        builder.HasOne(pv => pv.Inventory)
+        builder.HasOne(pv => pv.ProductInventory)
             .WithOne(pi => pi.ProductVariation)
-            .HasForeignKey<ProductInventory>(pi => pi.ProductVariationId)
+            .HasForeignKey<ProductVariation>(pv => pv.ProductInventoryId)
             .IsRequired();
 
         builder.HasMany(pv => pv.OrderDetails)

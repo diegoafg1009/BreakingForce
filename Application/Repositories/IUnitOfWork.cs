@@ -8,6 +8,7 @@ public interface IUnitOfWork : IDisposable
     IObjectiveRepository Objectives { get; }
     IProductRepository Products { get; }
     ISubcategoryRepository Subcategories { get; }
+    ITransactionRepository Transactions { get; }
 
     Task CommitAsync();
 }

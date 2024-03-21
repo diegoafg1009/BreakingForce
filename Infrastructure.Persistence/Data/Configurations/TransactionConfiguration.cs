@@ -23,6 +23,8 @@ public class TransactionConfiguration : IEntityTypeConfiguration<Transaction>
             .HasDefaultValueSql("GETDATE()")
             .IsRequired();
 
+        builder.Property(t => t.UserId);
+
         //Relationships
         builder.HasOne(t => t.TransactionType)
             .WithMany(tt => tt.Transactions)

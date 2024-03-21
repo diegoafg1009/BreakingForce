@@ -1,4 +1,5 @@
 using Domain.Entities;
+using Infrastructure.Persistence.Data.Seeds;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -28,5 +29,8 @@ public class TransactionTypeConfiguration : IEntityTypeConfiguration<Transaction
             .WithOne(t => t.TransactionType)
             .HasForeignKey(t => t.TransactionTypeId)
             .IsRequired();
+
+        //Seed Data
+        builder.HasData(DefaultTransactionTypes.Seed());
     }
 }
