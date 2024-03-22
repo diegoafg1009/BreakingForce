@@ -10,5 +10,6 @@ public class GetProductSimpleDto
     public string Subcategory { get; set; } = null!;
     public string Objective { get; set; } = null!;
     public string Brand { get; set; } = null!;
+    public bool IsActive { get; set; }
     public string Image { get; set; } = null!;
 }

@@ -17,6 +17,7 @@ public class ProductProfile : Profile
             .ForMember(dest => dest.Brand, opt => opt.MapFrom(src => src.Brand.Name))
             .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Images.FirstOrDefault()!.Url));
         CreateMap<CreateProductDto, Domain.Entities.Product>()
+            .ForMember(dest => dest.IsActive , opt => opt.MapFrom(src => true))
             .ForMember(dest => dest.Images,
                 opt => opt.MapFrom(src => src.Images.Select((i, index) =>
                     new ProductImage($"products/{Guid.NewGuid().ToString()}{Path.GetExtension(i.FileName)}",

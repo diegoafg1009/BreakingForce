@@ -10,9 +10,23 @@ namespace Infrastructure.Persistence.Repositories;
 
 public class ProductRepository(ApplicationContext context) : GenericRepository<Product>(context), IProductRepository
 {
-    public async Task<IEnumerable<Product>> GetWithFiltersAsync(ProductFilterDto filterDto)
+    public override Task<Product?> GetByIdAsync(Guid id)
     {
-        var products = DbSet
+        return DbSet
+            .Include(x => x.Subcategory)
+            .Include(x => x.Brand)
+            .Include(x => x.Objective)
+            .Include(x => x.Images)
+            .Include(x => x.Variations)
+            .ThenInclude(y => y.ProductInventory )
+            .Include(x => x.Variations)
+            .ThenInclude(y => y.Flavor)
+            .FirstOrDefaultAsync(x => x.Id == id);
+    }
+
+    public async Task<(IEnumerable<Product>, double)> GetWithFiltersAsync(ProductFilterDto filterDto)
+    {
+        var queryable = DbSet
             .Include(x => x.Subcategory)
             .Include(x => x.Brand)
             .Include(x => x.Objective)
@@ -24,22 +38,22 @@ public class ProductRepository(ApplicationContext context) : GenericRepository<P
 
         if (!string.IsNullOrWhiteSpace(filterDto.Search))
         {
-            products = products.Where(p => p.Name.Contains(filterDto.Search));
+            queryable = queryable.Where(p => p.Name.Contains(filterDto.Search));
         }
 
         if (filterDto.SubcategoryId != null)
         {
-            products = products.Where(p => p.SubcategoryId == filterDto.SubcategoryId);
+            queryable = queryable.Where(p => p.SubcategoryId == filterDto.SubcategoryId);
         }
 
         if (filterDto.BrandId != null)
         {
-            products = products.Where(p => p.BrandId == filterDto.BrandId);
+            queryable = queryable.Where(p => p.BrandId == filterDto.BrandId);
         }
 
         if (filterDto.ObjectiveId != null)
         {
-            products = products.Where(p => p.ObjectiveId == filterDto.ObjectiveId);
+            queryable = queryable.Where(p => p.ObjectiveId == filterDto.ObjectiveId);
         }
 
         if (!string.IsNullOrWhiteSpace(filterDto.SortBy))
@@ -47,9 +61,9 @@ public class ProductRepository(ApplicationContext context) : GenericRepository<P
             var propertyInfo = typeof(Product).GetProperty(filterDto.SortBy);
             if (propertyInfo != null)
             {
-                products = filterDto.IsSortAscending
-                    ? products.OrderBy(p => propertyInfo.GetValue(p, null))
-                    : products.OrderByDescending(p => propertyInfo.GetValue(p, null));
+                queryable = filterDto.IsSortAscending
+                    ? queryable.OrderBy(p => propertyInfo.GetValue(p, null))
+                    : queryable.OrderByDescending(p => propertyInfo.GetValue(p, null));
             }
             else
             {
@@ -57,8 +71,10 @@ public class ProductRepository(ApplicationContext context) : GenericRepository<P
             }
         }
 
-        products = products.Paginate(filterDto.Page, filterDto.PageSize);
+        var totalRecords = await queryable.CountAsync();
 
-        return await products.ToListAsync();
+        var products = await queryable.Paginate(filterDto.Page, filterDto.PageSize).ToListAsync();
+
+        return (products, totalRecords);
     }
 }

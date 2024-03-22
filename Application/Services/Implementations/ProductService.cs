@@ -1,5 +1,6 @@
 using Application.Contracts.Product.DTOs;
 using Application.Enums;
+using Application.Exceptions;
 using Application.Repositories;
 using Application.Services.Interfaces;
 using Application.Utils;
@@ -13,6 +14,16 @@ public class ProductService(IUnitOfWork unitOfWork, IMapper mapper, IFileStorage
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
     private readonly IMapper _mapper = mapper;
     private readonly IFileStorageService _fileStorageService = fileStorageService;
+
+    public async Task<GetProductDto> GetProduct(Guid productId)
+    {
+        var product = await _unitOfWork.Products.GetByIdAsync(productId);
+        if (product == null)
+        {
+            throw new NotFoundException(nameof(Product), productId);
+        }
+        return _mapper.Map<GetProductDto>(product)!;
+    }
 
     public async Task<GetProductDto> CreateProduct(CreateProductDto createProductDto, Guid userId)
     {
@@ -48,9 +59,10 @@ public class ProductService(IUnitOfWork unitOfWork, IMapper mapper, IFileStorage
         return _mapper.Map<GetProductDto>(product)!;
     }
 
-    public async Task<List<GetProductSimpleDto>> FilterProducts(ProductFilterDto filterDto)
+    public async Task<(List<GetProductSimpleDto>, double)> FilterProducts(ProductFilterDto filterDto)
     {
-        var products = await _unitOfWork.Products.GetWithFiltersAsync(filterDto);
-        return _mapper.Map<List<GetProductSimpleDto>>(products) ?? [];
+        var (paginatedProducts, totalRecords) = await _unitOfWork.Products.GetWithFiltersAsync(filterDto);
+        var getProductSimple = _mapper.Map<List<GetProductSimpleDto>>(paginatedProducts) ?? [];
+        return (getProductSimple, totalRecords);
     }
 }
