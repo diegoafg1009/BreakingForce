@@ -12,24 +12,33 @@ public static class ProductsEndpoint
 {
     public static RouteGroupBuilder MapProducts(this RouteGroupBuilder group)
     {
-        group.MapPost("/create", CreateProduct).DisableAntiforgery().Accepts<CreateProductDto>("multipart/form-data");
+        group.MapGet("/{productId}", GetProduct);
+        group.MapPost("/", CreateProduct).DisableAntiforgery().Accepts<CreateProduct>("multipart/form-data");
+        group.MapPut("/{productId}", UpdateProduct).DisableAntiforgery().Accepts<UpdateProduct>("multipart/form-data");
         group.MapGet("/filter", FilterProducts);
-        group.MapGet("/get/{productId}", GetProduct);
         return group;
     }
 
-    private static async Task<Ok<GetProductDto>> GetProduct([FromServices] IProductService productService, Guid productId)
+    private static async Task<Ok<GetProduct>> GetProduct([FromServices] IProductService productService, Guid productId)
     {
         var product = await productService.GetProduct(productId);
         return TypedResults.Ok(product);
     }
 
-    private static async Task<Created<GetProductDto>> CreateProduct(HttpRequest request, [FromServices] IProductService productService, IMapper mapper)
+    private static async Task<Created<GetProduct>> CreateProduct(HttpRequest request, [FromServices] IProductService productService, IMapper mapper)
     {
-        var createdProduct = mapper.Map<CreateProductDto>(request.Form)!;
+        var createdProduct = mapper.Map<CreateProduct>(request.Form)!;
         var product = await productService.CreateProduct(createdProduct, Guid.Empty);
 
         return TypedResults.Created((string?)null, product);
+    }
+
+    private static async Task<Ok<GetProduct>> UpdateProduct(HttpRequest request, [FromServices] IProductService productService, IMapper mapper, Guid productId)
+    {
+        var updatedProduct = mapper.Map<UpdateProduct>(request.Form);
+        var product = await productService.UpdateProduct(updatedProduct, productId, Guid.Empty);
+
+        return TypedResults.Ok(product);
     }
 
     private static async Task<Ok<List<GetProductSimpleDto>>> FilterProducts([AsParameters] ProductFilterDto filterDto,

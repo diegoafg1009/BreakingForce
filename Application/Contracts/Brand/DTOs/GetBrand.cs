@@ -1,6 +1,6 @@
 namespace Application.Contracts.Brand.DTOs;
 
-public class GetBrandDto
+public class GetBrand
 {
     public Guid Id { get; set; }
     public string Name { get; set; } = null!;

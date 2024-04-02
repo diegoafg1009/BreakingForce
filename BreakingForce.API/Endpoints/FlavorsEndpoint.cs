@@ -13,7 +13,7 @@ public static class FlavorsEndpoint
         return group;
     }
 
-    private static async Task<Ok<List<GetFlavorDto>>> GetAllFlavors([FromServices] IFlavorService flavorService)
+    private static async Task<Ok<List<GetFlavor>>> GetAllFlavors([FromServices] IFlavorService flavorService)
     {
         var flavors = await flavorService.GetAllFlavors();
         return TypedResults.Ok(flavors);

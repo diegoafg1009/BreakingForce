@@ -21,6 +21,7 @@ public static class ApplicationServicesExtension
         services.AddScoped<IObjectiveService, ObjectiveService>();
         services.AddScoped<IProductService, ProductService>();
         services.AddScoped<ISubcategoryService, SubcategoryService>();
+        services.AddScoped<IVariationService, VariationService>();
 
         #endregion
 

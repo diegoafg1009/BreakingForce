@@ -1,6 +1,6 @@
 namespace Application.Contracts.Flavor.DTOs;
 
-public class GetFlavorDto
+public class GetFlavor
 {
     public Guid Id { get; set; }
     public string Name { get; set; } = null!;

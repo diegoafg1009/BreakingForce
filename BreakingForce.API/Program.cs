@@ -1,4 +1,6 @@
+using System.Net.Mime;
 using System.Reflection;
+using System.Text.Json.Serialization;
 using Application;
 using BreakingForce.API.Endpoints;
 using BreakingForce.API.Middlewares;
@@ -61,12 +63,18 @@ builder.Services.AddCors(options =>
         policyBuilder.WithOrigins("http://localhost:4200")
             .AllowAnyHeader()
             .AllowAnyMethod()
+            .AllowCredentials()
             .WithExposedHeaders("totalRecords", "totalPages");
     });
 });
 #endregion
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
+builder.Services.ConfigureHttpJsonOptions(options =>
+{
+    options.SerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+});
 
 var app = builder.Build();
 
@@ -95,6 +103,7 @@ api.MapGroup("/flavors").MapFlavors();
 api.MapGroup("/objectives").MapObjectives();
 api.MapGroup("/products").MapProducts();
 api.MapGroup("/subcategories").MapSubcategories();
-
+api.MapGroup("/variations").MapVariations();
+api.MapGroup("/images").MapImages();
 
 app.Run();

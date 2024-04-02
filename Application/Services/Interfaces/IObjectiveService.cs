@@ -5,5 +5,5 @@ namespace Application.Services.Interfaces;
 
 public interface IObjectiveService
 {
-    public Task<List<GetObjectiveDto>> GetAllObjectives();
+    public Task<List<GetObjective>> GetAllObjectives();
 }

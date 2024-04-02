@@ -5,7 +5,8 @@ namespace Application.Services.Interfaces;
 
 public interface IProductService
 {
-    public Task<GetProductDto> GetProduct(Guid productId);
-    public Task<GetProductDto> CreateProduct(CreateProductDto createProductDto, Guid userId);
+    public Task<GetProduct> GetProduct(Guid productId);
+    public Task<GetProduct> CreateProduct(CreateProduct createProduct, Guid userId);
+    public Task<GetProduct> UpdateProduct(UpdateProduct updateProduct, Guid productId, Guid userId);
     public Task<(List<GetProductSimpleDto>, double)> FilterProducts(ProductFilterDto filterDto);
 }

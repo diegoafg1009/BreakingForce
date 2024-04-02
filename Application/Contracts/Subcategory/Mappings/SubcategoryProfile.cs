@@ -8,6 +8,6 @@ public class SubcategoryProfile : Profile
 {
     public SubcategoryProfile()
     {
-        CreateMap<ProductSubcategory, GetSubcategoryDto>();
+        CreateMap<ProductSubcategory, GetSubcategory>();
     }
 }

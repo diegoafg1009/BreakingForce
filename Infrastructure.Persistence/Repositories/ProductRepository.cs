@@ -10,9 +10,9 @@ namespace Infrastructure.Persistence.Repositories;
 
 public class ProductRepository(ApplicationContext context) : GenericRepository<Product>(context), IProductRepository
 {
-    public override Task<Product?> GetByIdAsync(Guid id)
+    public override async Task<Product?> GetByIdAsync(Guid id)
     {
-        return DbSet
+        return await DbSet
             .Include(x => x.Subcategory)
             .Include(x => x.Brand)
             .Include(x => x.Objective)
@@ -22,6 +22,15 @@ public class ProductRepository(ApplicationContext context) : GenericRepository<P
             .Include(x => x.Variations)
             .ThenInclude(y => y.Flavor)
             .FirstOrDefaultAsync(x => x.Id == id);
+    }
+
+    public override async Task<Product> UpdateAsync(Product entity)
+    {
+        return await Task.Run(() =>
+        {
+            DbSet.Update(entity);
+            return entity;
+        });
     }
 
     public async Task<(IEnumerable<Product>, double)> GetWithFiltersAsync(ProductFilterDto filterDto)

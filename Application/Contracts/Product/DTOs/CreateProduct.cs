@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace Application.Contracts.Product.DTOs;
 
-public class CreateProductDto
+public class CreateProduct
 {
     public Guid? Id { get; set; }
     public string Name { get; set; } = null!;

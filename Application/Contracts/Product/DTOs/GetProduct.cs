@@ -2,7 +2,7 @@ using Application.Contracts.Variation.DTOs;
 
 namespace Application.Contracts.Product.DTOs;
 
-public class GetProductDto
+public class GetProduct
 {
     public Guid Id { get; set; }
     public string Name { get; set; } = null!;
@@ -18,5 +18,5 @@ public class GetProductDto
     public string Brand { get; set; } = null!;
     public List<string> Images { get; set; } = null!;
     public bool IsActive { get; set; }
-    public List<GetVariationDto> Variations { get; set; } = null!;
+    public List<GetVariationSimple> Variations { get; set; } = null!;
 }

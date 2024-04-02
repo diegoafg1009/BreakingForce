@@ -1,4 +1,5 @@
 using System.Linq.Expressions;
+using Application.Exceptions;
 using Application.Repositories;
 using Infrastructure.Persistence.Data;
 using Microsoft.EntityFrameworkCore;
@@ -21,6 +22,15 @@ public class GenericRepository<T> : IGenericRepository <T> where T : class
     {
         await DbSet.AddAsync(entity);
         return entity;
+    }
+
+    public Task<IEnumerable<T>> AddRangeAsync(IEnumerable<T> entities)
+    {
+        return Task.Run(() =>
+        {
+            DbSet.AddRange(entities);
+            return entities;
+        });
     }
 
     public virtual async Task<T> UpdateAsync(T entity)
@@ -55,5 +65,25 @@ public class GenericRepository<T> : IGenericRepository <T> where T : class
     public async Task<IEnumerable<T>> GetWithFilterAsync(Expression<Func<T, bool>> predicate)
     {
         return await Task.Run(() => DbSet.Where(predicate).AsEnumerable());
+    }
+
+    public async Task DeleteAsync(Guid id)
+    {
+        var entity = await GetByIdAsync(id);
+
+        if (entity is null)
+        {
+            throw new NotFoundException(nameof(T), id);
+        }
+
+        DbSet.Remove(entity);
+    }
+
+    public async Task DeleteRangeAsync(IEnumerable<T> entities)
+    {
+        await Task.Run(() =>
+        {
+            DbSet.RemoveRange(entities);
+        });
     }
 }

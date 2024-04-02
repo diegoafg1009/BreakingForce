@@ -1,6 +1,6 @@
 namespace Application.Contracts.Objective.DTOs;
 
-public class GetObjectiveDto
+public class GetObjective
 {
     public Guid Id { get; set; }
     public string Name { get; set; } = null!;

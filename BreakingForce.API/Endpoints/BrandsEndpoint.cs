@@ -10,19 +10,19 @@ public static class BrandsEndpoint
 {
     public static RouteGroupBuilder MapBrands(this RouteGroupBuilder group)
     {
-        group.MapPost("/create", CreateBrand).DisableAntiforgery().Accepts<CreateBrandDto>("multipart/form-data");
+        group.MapPost("/", CreateBrand).DisableAntiforgery().Accepts<CreateBrand>("multipart/form-data");
         group.MapGet("/get-all", GetAllBrands);
         return group;
     }
 
-    private static async Task<Created<GetBrandDto>> CreateBrand( HttpRequest request, [FromServices] IBrandService brandService, [FromServices] IMapper mapper)
+    private static async Task<Created<GetBrand>> CreateBrand( HttpRequest request, [FromServices] IBrandService brandService, [FromServices] IMapper mapper)
     {
-        var createBrandDto = mapper.Map<CreateBrandDto>(request.Form)!;
+        var createBrandDto = mapper.Map<CreateBrand>(request.Form)!;
         var brand = await brandService.CreateBrand(createBrandDto);
         return TypedResults.Created( (string?)null, brand);
     }
 
-    private static async Task<Ok<List<GetBrandDto>>> GetAllBrands([FromServices] IBrandService brandService)
+    private static async Task<Ok<List<GetBrand>>> GetAllBrands([FromServices] IBrandService brandService)
     {
         var brands = await brandService.GetAllBrands();
         return TypedResults.Ok(brands);

@@ -10,9 +10,9 @@ public class SubcategoryService(IUnitOfWork unitOfWork, IMapper mapper) : ISubca
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
     private readonly IMapper _mapper = mapper;
 
-    public async Task<List<GetSubcategoryDto>> GetAllSubcategories()
+    public async Task<List<GetSubcategory>> GetAllSubcategories()
     {
         var subcategories = await _unitOfWork.Subcategories.GetAllAsync();
-        return _mapper.Map<List<GetSubcategoryDto>>(subcategories) ?? [];
+        return _mapper.Map<List<GetSubcategory>>(subcategories) ?? [];
     }
 }

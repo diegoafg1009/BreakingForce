@@ -8,6 +8,6 @@ public class ObjectiveProfile : Profile
 {
     public ObjectiveProfile()
     {
-        CreateMap<ProductObjective, GetObjectiveDto>();
+        CreateMap<ProductObjective, GetObjective>();
     }
 }

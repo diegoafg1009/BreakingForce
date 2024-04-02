@@ -5,5 +5,5 @@ namespace Application.Services.Interfaces;
 
 public interface ICategoryService
 {
-    public Task<List<GetCategoryDto>> GetAllCategories();
+    public Task<List<GetCategory>> GetAllCategories();
 }

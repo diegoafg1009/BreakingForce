@@ -13,7 +13,7 @@ public static class ObjectivesEndpoint
         return group;
     }
 
-    private static async Task<Ok<List<GetObjectiveDto>>> GetAllObjectives([FromServices] IObjectiveService objectiveService)
+    private static async Task<Ok<List<GetObjective>>> GetAllObjectives([FromServices] IObjectiveService objectiveService)
     {
         var objectives = await objectiveService.GetAllObjectives();
         return TypedResults.Ok(objectives);

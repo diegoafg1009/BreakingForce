@@ -10,9 +10,9 @@ public class ObjectiveService(IUnitOfWork unitOfWork, IMapper mapper) : IObjecti
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
     private readonly IMapper _mapper = mapper;
 
-    public async Task<List<GetObjectiveDto>> GetAllObjectives()
+    public async Task<List<GetObjective>> GetAllObjectives()
     {
         var objectives = await _unitOfWork.Objectives.GetAllAsync();
-        return _mapper.Map<List<GetObjectiveDto>>(objectives) ?? [];
+        return _mapper.Map<List<GetObjective>>(objectives) ?? [];
     }
 }

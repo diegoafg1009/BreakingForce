@@ -26,4 +26,11 @@ public class LocalFileStorageService(string baseDirectory) : IFileStorageService
             }
         });
     }
+
+    public async Task GetFile(string path, Stream data)
+    {
+        var fullPath = Path.Combine(_baseDirectory, path);
+        await using var fileStream = new FileStream(fullPath, FileMode.Open, FileAccess.Read);
+        await fileStream.CopyToAsync(data);
+    }
 }

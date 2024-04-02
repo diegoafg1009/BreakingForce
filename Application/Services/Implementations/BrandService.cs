@@ -13,20 +13,20 @@ public class BrandService(IUnitOfWork unitOfWork, IMapper mapper, IFileStorageSe
     private readonly IMapper _mapper = mapper;
     private readonly IFileStorageService _fileStorageService = fileStorageService;
 
-    public async Task<GetBrandDto> CreateBrand(CreateBrandDto createBrandDto)
+    public async Task<GetBrand> CreateBrand(CreateBrand createBrand)
     {
-        var brand = _mapper.Map<ProductBrand>(createBrandDto)!;
+        var brand = _mapper.Map<ProductBrand>(createBrand)!;
 
-        await _fileStorageService.SaveFile(brand.Image, createBrandDto.Image.OpenReadStream());
+        await _fileStorageService.SaveFile(brand.Image, createBrand.Image.OpenReadStream());
 
         await _unitOfWork.Brands.AddAsync(brand);
         await _unitOfWork.CommitAsync();
-        return _mapper.Map<GetBrandDto>(brand)!;
+        return _mapper.Map<GetBrand>(brand)!;
     }
 
-    public async Task<List<GetBrandDto>> GetAllBrands()
+    public async Task<List<GetBrand>> GetAllBrands()
     {
         var brands = await _unitOfWork.Brands.GetAllAsync();
-        return _mapper.Map<List<GetBrandDto>>(brands) ?? [];
+        return _mapper.Map<List<GetBrand>>(brands) ?? [];
     }
 }

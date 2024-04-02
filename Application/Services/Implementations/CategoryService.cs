@@ -10,9 +10,9 @@ public class CategoryService(IUnitOfWork unitOfWork, IMapper mapper) : ICategory
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
     private readonly IMapper _mapper = mapper;
 
-    public async Task<List<GetCategoryDto>> GetAllCategories()
+    public async Task<List<GetCategory>> GetAllCategories()
     {
         var categories = await _unitOfWork.Categories.GetAllAsync();
-        return _mapper.Map<List<GetCategoryDto>>(categories) ?? [];
+        return _mapper.Map<List<GetCategory>>(categories) ?? [];
     }
 }

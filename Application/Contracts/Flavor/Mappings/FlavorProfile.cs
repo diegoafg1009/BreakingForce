@@ -8,6 +8,6 @@ public class FlavorProfile : Profile
 {
     public FlavorProfile()
     {
-        CreateMap<ProductFlavor, GetFlavorDto>();
+        CreateMap<ProductFlavor, GetFlavor>();
     }
 }

@@ -5,5 +5,5 @@ namespace Application.Services.Interfaces;
 
 public interface IFlavorService
 {
-    public Task<List<GetFlavorDto>> GetAllFlavors();
+    public Task<List<GetFlavor>> GetAllFlavors();
 }

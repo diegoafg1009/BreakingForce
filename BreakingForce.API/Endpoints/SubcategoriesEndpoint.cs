@@ -13,7 +13,7 @@ public static class SubcategoriesEndpoint
         return group;
     }
 
-    private static async Task<Ok<List<GetSubcategoryDto>>> GetAllSubcategories([FromServices] ISubcategoryService subcategoryService)
+    private static async Task<Ok<List<GetSubcategory>>> GetAllSubcategories([FromServices] ISubcategoryService subcategoryService)
     {
         var subcategories = await subcategoryService.GetAllSubcategories();
         return TypedResults.Ok(subcategories);

@@ -1,6 +1,6 @@
 namespace Application.Contracts.Subcategory.DTOs;
 
-public class GetSubcategoryDto
+public class GetSubcategory
 {
     public Guid Id { get; set; }
     public string Name { get; set; } = null!;

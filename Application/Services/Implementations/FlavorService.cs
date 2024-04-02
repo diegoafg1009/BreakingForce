@@ -10,10 +10,10 @@ public class FlavorService(IUnitOfWork unitOfWork, IMapper mapper) : IFlavorServ
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
     private readonly IMapper _mapper = mapper;
 
-    public async Task<List<GetFlavorDto>> GetAllFlavors()
+    public async Task<List<GetFlavor>> GetAllFlavors()
     {
         var flavors = await _unitOfWork.Flavors.GetAllAsync();
-        return _mapper.Map<List<GetFlavorDto>>(flavors) ?? [];
+        return _mapper.Map<List<GetFlavor>>(flavors) ?? [];
     }
 
 }

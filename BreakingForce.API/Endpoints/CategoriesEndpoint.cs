@@ -13,7 +13,7 @@ public static class CategoriesEndpoint
         return group;
     }
 
-    private static async Task<Ok<List<GetCategoryDto>>> GetAllCategories([FromServices] ICategoryService categoryService)
+    private static async Task<Ok<List<GetCategory>>> GetAllCategories([FromServices] ICategoryService categoryService)
     {
         var categories = await categoryService.GetAllCategories();
         return TypedResults.Ok(categories);
