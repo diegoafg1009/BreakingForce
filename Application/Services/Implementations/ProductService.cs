@@ -46,7 +46,7 @@ public class ProductService(IUnitOfWork unitOfWork, IMapper mapper, IFileStorage
             transaction.TransactionDetails.Add(new TransactionDetail
             {
                 AmountAffected = variation.ProductInventory.Quantity,
-                InventoryId = variation.ProductInventoryId
+                InventoryId = variation.ProductInventory.Id
             });
         }
 

@@ -7,7 +7,7 @@ public class GetVariationSimple
     public decimal Weight { get; set; }
     public int Stock { get; set; }
     public bool IsActive { get; set; }
-    public Guid FlavorId { get; set; }
+    public Guid? FlavorId { get; set; }
     public string? FlavorName { get; set; }
     public string? FlavorColor { get; set; }
 }

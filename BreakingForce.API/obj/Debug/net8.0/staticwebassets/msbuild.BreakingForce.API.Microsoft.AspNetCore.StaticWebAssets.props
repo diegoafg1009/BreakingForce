@@ -32,12 +32,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\brands\b81614f6-67c6-40ed-a326-b33ebc85f28e.webp))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\3857f381-17d5-4f97-bb09-7ab6ae055aaf.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\0a35f385-3f75-4e3d-bf6a-a923d9dc9a84.webp))">
       <SourceType>Package</SourceType>
       <SourceId>BreakingForce.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/BreakingForce.API</BasePath>
-      <RelativePath>images/products/3857f381-17d5-4f97-bb09-7ab6ae055aaf.jpg</RelativePath>
+      <RelativePath>images/products/0a35f385-3f75-4e3d-bf6a-a923d9dc9a84.webp</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -46,14 +46,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\3857f381-17d5-4f97-bb09-7ab6ae055aaf.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\0a35f385-3f75-4e3d-bf6a-a923d9dc9a84.webp))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\453db22b-209d-415f-85ea-1f3722ba4906.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\53f545d2-6207-4d9e-90a4-96262b1f65db.webp))">
       <SourceType>Package</SourceType>
       <SourceId>BreakingForce.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/BreakingForce.API</BasePath>
-      <RelativePath>images/products/453db22b-209d-415f-85ea-1f3722ba4906.jpg</RelativePath>
+      <RelativePath>images/products/53f545d2-6207-4d9e-90a4-96262b1f65db.webp</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -62,14 +62,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\453db22b-209d-415f-85ea-1f3722ba4906.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\53f545d2-6207-4d9e-90a4-96262b1f65db.webp))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\6d341a7a-3071-4588-982d-f00613418c1c.webp))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\5b172a04-8e4d-4412-a846-3f66caf1d40c.webp))">
       <SourceType>Package</SourceType>
       <SourceId>BreakingForce.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/BreakingForce.API</BasePath>
-      <RelativePath>images/products/6d341a7a-3071-4588-982d-f00613418c1c.webp</RelativePath>
+      <RelativePath>images/products/5b172a04-8e4d-4412-a846-3f66caf1d40c.webp</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -78,14 +78,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\6d341a7a-3071-4588-982d-f00613418c1c.webp))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\5b172a04-8e4d-4412-a846-3f66caf1d40c.webp))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\7292b37b-97ad-419c-b6c9-6d43b9d56bca.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\84a26e79-b60d-4518-950b-62f2620ec936.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>BreakingForce.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/BreakingForce.API</BasePath>
-      <RelativePath>images/products/7292b37b-97ad-419c-b6c9-6d43b9d56bca.jpg</RelativePath>
+      <RelativePath>images/products/84a26e79-b60d-4518-950b-62f2620ec936.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -94,14 +94,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\7292b37b-97ad-419c-b6c9-6d43b9d56bca.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\84a26e79-b60d-4518-950b-62f2620ec936.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\86f4191a-a775-4356-a19e-52ef707709c5.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\da8f1fce-f54f-4376-b935-cd37af08339f.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>BreakingForce.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/BreakingForce.API</BasePath>
-      <RelativePath>images/products/86f4191a-a775-4356-a19e-52ef707709c5.jpg</RelativePath>
+      <RelativePath>images/products/da8f1fce-f54f-4376-b935-cd37af08339f.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -110,14 +110,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\86f4191a-a775-4356-a19e-52ef707709c5.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\da8f1fce-f54f-4376-b935-cd37af08339f.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\d32c74df-4d33-487d-9184-afa1db277b98.webp))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\e0e97a23-258c-45c8-8924-d91feb499bc3.webp))">
       <SourceType>Package</SourceType>
       <SourceId>BreakingForce.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/BreakingForce.API</BasePath>
-      <RelativePath>images/products/d32c74df-4d33-487d-9184-afa1db277b98.webp</RelativePath>
+      <RelativePath>images/products/e0e97a23-258c-45c8-8924-d91feb499bc3.webp</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -126,23 +126,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\d32c74df-4d33-487d-9184-afa1db277b98.webp))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\fc828ef4-02ec-44f6-90b4-59b5f9df0273.webp))">
-      <SourceType>Package</SourceType>
-      <SourceId>BreakingForce.API</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/BreakingForce.API</BasePath>
-      <RelativePath>images/products/fc828ef4-02ec-44f6-90b4-59b5f9df0273.webp</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\fc828ef4-02ec-44f6-90b4-59b5f9df0273.webp))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\products\e0e97a23-258c-45c8-8924-d91feb499bc3.webp))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>
