@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using Domain.Base;
 
 namespace Domain.Entities;
@@ -6,6 +7,7 @@ public class ProductVariation : BaseModel
 {
     public decimal UnitPrice { get; set; }
     public decimal Weight { get; set; }
+    public string MeasureUnit { get; set; } = null!;
     public bool IsActive { get; set; }
     public Guid ProductId { get; set; }
     public Product Product { get; set; } = null!;

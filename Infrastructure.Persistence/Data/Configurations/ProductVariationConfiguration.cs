@@ -9,7 +9,9 @@ public class ProductVariationConfiguration : IEntityTypeConfiguration<ProductVar
     public void Configure(EntityTypeBuilder<ProductVariation> builder)
     {
         //Table
-        builder.ToTable("ProductVariations");
+        builder.ToTable("ProductVariations",
+            pv => pv.HasCheckConstraint("CK_ProductVariations_MeasureUnit",
+                "MeasureUnit IN ('g', 'kg', 'l', 'ml', 'und', 'caja', 'cajas', 'lb', 'botella', 'botellas')"));
 
         //Primary Key
         builder.HasKey(pv => pv.Id);
@@ -25,6 +27,10 @@ public class ProductVariationConfiguration : IEntityTypeConfiguration<ProductVar
 
         builder.Property(pv => pv.Weight)
             .HasColumnType("decimal(18,2)")
+            .IsRequired();
+
+        builder.Property(pv => pv.MeasureUnit)
+            .HasDefaultValue("kg")
             .IsRequired();
 
         builder.Property(pv => pv.IsActive)

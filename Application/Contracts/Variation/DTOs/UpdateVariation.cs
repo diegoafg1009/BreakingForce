@@ -5,6 +5,7 @@ public class UpdateVariation
     public Guid? Id { get; set; }
     public decimal UnitPrice { get; set; }
     public decimal Weight { get; set; }
+    public string MeasureUnit { get; set; } = null!;
     public bool IsActive { get; set; }
     public int Stock { get; set; }
     public Guid? FlavorId { get; set; }

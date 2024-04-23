@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aLgWFVVqgZbbiZ/SFPF3Y6eATyclwno1K/lZzASPdaw=",
+  "Hash": "BxdcWWsvWiWuDx/ym7RNc4RXuxVf0J9uBylEkEeCCzE=",
   "Source": "BreakingForce.API",
   "BasePath": "_content/BreakingForce.API",
   "Mode": "Default",
@@ -74,12 +74,12 @@
       "OriginalItemSpec": "wwwroot/images/products/0a35f385-3f75-4e3d-bf6a-a923d9dc9a84.webp"
     },
     {
-      "Identity": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/wwwroot/images/products/53f545d2-6207-4d9e-90a4-96262b1f65db.webp",
+      "Identity": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/wwwroot/images/products/0f28b080-01b5-4cb9-b07f-15fd7fcac868.jpg",
       "SourceId": "BreakingForce.API",
       "SourceType": "Discovered",
       "ContentRoot": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/wwwroot/",
       "BasePath": "_content/BreakingForce.API",
-      "RelativePath": "images/products/53f545d2-6207-4d9e-90a4-96262b1f65db.webp",
+      "RelativePath": "images/products/0f28b080-01b5-4cb9-b07f-15fd7fcac868.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -90,7 +90,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/products/53f545d2-6207-4d9e-90a4-96262b1f65db.webp"
+      "OriginalItemSpec": "wwwroot/images/products/0f28b080-01b5-4cb9-b07f-15fd7fcac868.jpg"
+    },
+    {
+      "Identity": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/wwwroot/images/products/25333186-063d-4e4f-b87a-b21242fcdd39.webp",
+      "SourceId": "BreakingForce.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/wwwroot/",
+      "BasePath": "_content/BreakingForce.API",
+      "RelativePath": "images/products/25333186-063d-4e4f-b87a-b21242fcdd39.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/products/25333186-063d-4e4f-b87a-b21242fcdd39.webp"
     },
     {
       "Identity": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/wwwroot/images/products/5b172a04-8e4d-4412-a846-3f66caf1d40c.webp",
@@ -112,12 +131,12 @@
       "OriginalItemSpec": "wwwroot/images/products/5b172a04-8e4d-4412-a846-3f66caf1d40c.webp"
     },
     {
-      "Identity": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/wwwroot/images/products/84a26e79-b60d-4518-950b-62f2620ec936.jpg",
+      "Identity": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/wwwroot/images/products/6d4e7d9e-be11-45cf-90fa-28d6930e3687.jpg",
       "SourceId": "BreakingForce.API",
       "SourceType": "Discovered",
       "ContentRoot": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/wwwroot/",
       "BasePath": "_content/BreakingForce.API",
-      "RelativePath": "images/products/84a26e79-b60d-4518-950b-62f2620ec936.jpg",
+      "RelativePath": "images/products/6d4e7d9e-be11-45cf-90fa-28d6930e3687.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -128,7 +147,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/products/84a26e79-b60d-4518-950b-62f2620ec936.jpg"
+      "OriginalItemSpec": "wwwroot/images/products/6d4e7d9e-be11-45cf-90fa-28d6930e3687.jpg"
     },
     {
       "Identity": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/wwwroot/images/products/da8f1fce-f54f-4376-b935-cd37af08339f.jpg",
@@ -148,25 +167,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/products/da8f1fce-f54f-4376-b935-cd37af08339f.jpg"
-    },
-    {
-      "Identity": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/wwwroot/images/products/e0e97a23-258c-45c8-8924-d91feb499bc3.webp",
-      "SourceId": "BreakingForce.API",
-      "SourceType": "Discovered",
-      "ContentRoot": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/wwwroot/",
-      "BasePath": "_content/BreakingForce.API",
-      "RelativePath": "images/products/e0e97a23-258c-45c8-8924-d91feb499bc3.webp",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/products/e0e97a23-258c-45c8-8924-d91feb499bc3.webp"
     }
   ]
 }

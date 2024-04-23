@@ -79,8 +79,12 @@ public class ProductService(IUnitOfWork unitOfWork, IMapper mapper, IFileStorage
             var inventory = await _unitOfWork.Inventories.GetByVariationIdAsync((Guid)variation.Id!);
             if (inventory == null)
             {
+                // Add product variation
                 inventory = new ProductInventory(updateProduct.Variations.First(x => x.Id == variation.Id).Stock);
                 product.Variations.First(x => x.Id == variation.Id).ProductInventory = inventory;
+                product.Variations.First(x => x.Id == variation.Id).ProductInventoryId = inventory.Id;
+                await _unitOfWork.Variations.AddAsync(product.Variations.First(x => x.Id == variation.Id));
+                await _unitOfWork.Inventories.AddAsync(inventory);
                 transaction.TransactionDetails.Add(new TransactionDetail
                 {
                     AmountAffected = inventory.Quantity,
@@ -101,6 +105,7 @@ public class ProductService(IUnitOfWork unitOfWork, IMapper mapper, IFileStorage
                 }
             }
         }
+        await _unitOfWork.Products.UpdateAsync(product);
 
         await _unitOfWork.Transactions.AddAsync(transaction);
 

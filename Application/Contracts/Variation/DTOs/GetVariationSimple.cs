@@ -5,6 +5,7 @@ public class GetVariationSimple
     public Guid Id { get; set; }
     public decimal UnitPrice { get; set; }
     public decimal Weight { get; set; }
+    public string MeasureUnit { get; set; } = null!;
     public int Stock { get; set; }
     public bool IsActive { get; set; }
     public Guid? FlavorId { get; set; }
