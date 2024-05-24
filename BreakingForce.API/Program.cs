@@ -7,6 +7,8 @@ using BreakingForce.API.Middlewares;
 using Infrastructure.ExternalServices;
 using Infrastructure.Identity;
 using Infrastructure.Persistence;
+using Infrastructure.Persistence.Data;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -85,6 +87,22 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+}
+
+using(var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var loggerFactory = services.GetRequiredService<ILoggerFactory>();
+    try
+    {
+        var context = services.GetRequiredService<ApplicationContext>();
+        await context.Database.MigrateAsync();
+    }
+    catch (Exception e)
+    {
+        var logger = loggerFactory.CreateLogger<Program>();
+        logger.LogError(e, "An error occurred while migrating the database.");
+    }
 }
 
 app.UseHttpsRedirection();
