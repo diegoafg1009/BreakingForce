@@ -17,7 +17,7 @@ public class ShipmentStatusConfiguration : IEntityTypeConfiguration<ShipmentStat
 
         //Properties
         builder.Property(ss => ss.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(ss => ss.Name)

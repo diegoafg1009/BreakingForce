@@ -16,11 +16,11 @@ public class TransactionConfiguration : IEntityTypeConfiguration<Transaction>
 
         //Properties
         builder.Property(t => t.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(t => t.Date)
-            .HasDefaultValueSql("GETDATE()")
+            .HasDefaultValueSql("NOW()")
             .IsRequired();
 
         builder.Property(t => t.UserId);

@@ -16,7 +16,7 @@ public class ProductCategoryConfiguration : IEntityTypeConfiguration<ProductCate
 
         //Properties
         builder.Property(pc => pc.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(pc => pc.Name)

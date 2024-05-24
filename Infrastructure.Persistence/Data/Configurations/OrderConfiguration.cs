@@ -16,15 +16,15 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
 
         //Properties
         builder.Property(o => o.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(o => o.OrderNumber)
-            .HasComputedColumnSql($"CONVERT(VARCHAR(8), {nameof(Order.OrderDate)}, 112) + '-' + CAST(Id AS VARCHAR(10))")
+            .HasComputedColumnSql($"CONCAT(DATE_FORMAT({nameof(Order.OrderDate)}, '%Y%m%d'), '-', ABS(CONV(SUBSTRING({nameof(Order.Id)}, 1, 8), 16, 10)))")
             .IsRequired();
 
         builder.Property(o => o.OrderDate)
-            .HasDefaultValueSql("GETDATE()")
+            .HasDefaultValueSql("NOW()")
             .IsRequired();
 
         builder.Property(o => o.Note)

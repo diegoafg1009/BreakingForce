@@ -17,7 +17,7 @@ public class CouponConfiguration : IEntityTypeConfiguration<Coupon>
         //Properties
 
         builder.Property(c => c.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(c => c.Code)
@@ -25,7 +25,7 @@ public class CouponConfiguration : IEntityTypeConfiguration<Coupon>
             .IsRequired();
 
         builder.Property(c => c.Discount)
-            .HasColumnType("decimal(5,2)")
+            .HasColumnType("DECIMAL(5,2)")
             .IsRequired();
 
         builder.Property(c => c.StartDate)

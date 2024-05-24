@@ -16,7 +16,7 @@ public class IdentificationTypeConfiguration : IEntityTypeConfiguration<Identifi
 
         //Properties
         builder.Property(it => it.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(it => it.Name)

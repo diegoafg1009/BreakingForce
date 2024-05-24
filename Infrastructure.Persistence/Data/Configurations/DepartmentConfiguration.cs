@@ -16,7 +16,7 @@ public class DepartmentConfiguration : IEntityTypeConfiguration<Department>
 
         //Properties
         builder.Property(d => d.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(d => d.Name)

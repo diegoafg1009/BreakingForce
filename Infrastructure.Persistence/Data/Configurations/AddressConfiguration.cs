@@ -16,7 +16,7 @@ public class AddressConfiguration : IEntityTypeConfiguration<Address>
 
         //Properties
         builder.Property(e => e.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(e => e.Description)
@@ -28,11 +28,11 @@ public class AddressConfiguration : IEntityTypeConfiguration<Address>
             .IsRequired();
 
         builder.Property(e => e.CreatedAt)
-            .HasDefaultValueSql("GETDATE()")
+            .HasDefaultValueSql("NOW()")
             .IsRequired();
 
         builder.Property(e => e.UpdatedAt)
-            .HasDefaultValueSql("GETDATE()")
+            .HasDefaultValueSql("NOW()")
             .IsRequired();
 
         //Relationships

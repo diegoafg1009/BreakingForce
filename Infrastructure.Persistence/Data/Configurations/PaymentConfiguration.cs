@@ -16,14 +16,14 @@ public class PaymentConfiguration : IEntityTypeConfiguration<Payment>
 
         //Properties
         builder.Property(p => p.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(p => p.ExternalId)
             .IsRequired();
 
         builder.Property(p => p.Date)
-            .HasDefaultValueSql("GETDATE()")
+            .HasDefaultValueSql("NOW()")
             .IsRequired();
 
         //Relationships

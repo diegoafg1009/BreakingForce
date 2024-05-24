@@ -16,7 +16,7 @@ public class DeliveryMethodConfiguration : IEntityTypeConfiguration<DeliveryMeth
 
         //Properties
         builder.Property(dm => dm.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(dm => dm.Name)
@@ -24,7 +24,7 @@ public class DeliveryMethodConfiguration : IEntityTypeConfiguration<DeliveryMeth
             .IsRequired();
 
         builder.Property(dm => dm.Price)
-            .HasColumnType("decimal(18,2)")
+            .HasColumnType("DECIMAL(18,2)")
             .IsRequired();
 
         //Relationships

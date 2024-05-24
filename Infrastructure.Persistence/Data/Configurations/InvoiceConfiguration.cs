@@ -16,7 +16,7 @@ public class InvoiceConfiguration : IEntityTypeConfiguration<Invoice>
 
         //Properties
         builder.Property(i => i.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(i => i.AssociatedDocument)
@@ -24,23 +24,23 @@ public class InvoiceConfiguration : IEntityTypeConfiguration<Invoice>
             .IsRequired();
 
         builder.Property(i => i.SubTotal)
-            .HasColumnType("decimal(18,2)")
+            .HasColumnType("DECIMAL(18,2)")
             .IsRequired();
 
         builder.Property(i => i.Discount)
-            .HasColumnType("decimal(18,2)")
+            .HasColumnType("DECIMAL(18,2)")
             .IsRequired();
 
         builder.Property(i => i.Tax)
-            .HasColumnType("decimal(18,2)")
+            .HasColumnType("DECIMAL(18,2)")
             .IsRequired();
 
         builder.Property(i => i.DeliveryFee)
-            .HasColumnType("decimal(18,2)")
+            .HasColumnType("DECIMAL(18,2)")
             .IsRequired();
 
         builder.Property(i => i.Amount)
-            .HasColumnType("decimal(18,2)")
+            .HasColumnType("DECIMAL(18,2)")
             .IsRequired();
 
         //Relationships

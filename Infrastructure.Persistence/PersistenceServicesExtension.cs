@@ -12,10 +12,11 @@ public static class PersistenceServicesExtension
     public static IServiceCollection AddPersistenceServices(this IServiceCollection services,
         IConfiguration configuration)
     {
+        var connectionString = configuration.GetConnectionString("BreakingForceConnection");
         services.AddDbContext<ApplicationContext>(options =>
         {
-            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
-                sqlServerOptionsAction: sqlOptions =>
+            options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString),
+                mySqlOptionsAction: sqlOptions =>
                 {
                     sqlOptions.MigrationsAssembly(typeof(ApplicationContext).Assembly.FullName);
                 });

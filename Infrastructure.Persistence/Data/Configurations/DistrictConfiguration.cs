@@ -16,7 +16,7 @@ public class DistrictConfiguration : IEntityTypeConfiguration<District>
 
         //Properties
         builder.Property(d => d.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(d => d.Name)

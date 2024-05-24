@@ -17,7 +17,7 @@ public class PaymentStatusConfiguration : IEntityTypeConfiguration<PaymentStatus
 
         //Properties
         builder.Property(ps => ps.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(ps => ps.Name)

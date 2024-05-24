@@ -17,7 +17,7 @@ public class TransactionTypeConfiguration : IEntityTypeConfiguration<Transaction
 
         //Properties
         builder.Property(tt => tt.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(tt => tt.Name)

@@ -16,7 +16,7 @@ public class ProductObjectiveConfiguration : IEntityTypeConfiguration<ProductObj
 
         //Properties
         builder.Property(po => po.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(po => po.Name)

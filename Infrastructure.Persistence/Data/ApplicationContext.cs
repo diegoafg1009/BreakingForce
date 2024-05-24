@@ -39,7 +39,6 @@ public class ApplicationContext(DbContextOptions<ApplicationContext> options) : 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        modelBuilder.HasDefaultSchema("dbo");
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationContext).Assembly);
     }
 }

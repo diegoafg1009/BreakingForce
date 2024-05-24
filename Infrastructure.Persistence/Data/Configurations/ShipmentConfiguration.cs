@@ -16,7 +16,7 @@ public class ShipmentConfiguration : IEntityTypeConfiguration<Shipment>
 
         //Properties
         builder.Property(s => s.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
 

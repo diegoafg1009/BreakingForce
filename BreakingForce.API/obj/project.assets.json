@@ -1819,7 +1819,6 @@
           "Application": "1.0.0",
           "Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.1",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.1",
           "Pomelo.EntityFrameworkCore.MySql": "8.0.1"
         },
         "compile": {

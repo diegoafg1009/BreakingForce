@@ -18,15 +18,15 @@ public class ProductVariationConfiguration : IEntityTypeConfiguration<ProductVar
 
         //Properties
         builder.Property(pv => pv.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(pv => pv.UnitPrice)
-            .HasColumnType("decimal(18,2)")
+            .HasColumnType("DECIMAL(18,2)")
             .IsRequired();
 
         builder.Property(pv => pv.Weight)
-            .HasColumnType("decimal(18,2)")
+            .HasColumnType("DECIMAL(18,2)")
             .IsRequired();
 
         builder.Property(pv => pv.MeasureUnit)

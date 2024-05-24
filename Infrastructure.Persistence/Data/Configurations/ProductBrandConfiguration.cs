@@ -16,7 +16,7 @@ public class ProductBrandConfiguration : IEntityTypeConfiguration<ProductBrand>
 
         //Properties
         builder.Property(pb => pb.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(pb => pb.Name)

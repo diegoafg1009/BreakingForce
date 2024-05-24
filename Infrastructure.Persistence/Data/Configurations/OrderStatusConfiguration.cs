@@ -17,7 +17,7 @@ public class OrderStatusConfiguration : IEntityTypeConfiguration<OrderStatus>
 
         //Properties
         builder.Property(os => os.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(os => os.Name)

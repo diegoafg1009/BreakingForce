@@ -16,7 +16,7 @@ public class EnterpriseDataConfiguration : IEntityTypeConfiguration<EnterpriseDa
 
         //Properties
         builder.Property(ed => ed.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(ed => ed.BusinessName)

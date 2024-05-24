@@ -19,19 +19,19 @@ public class OrderDetailConfiguration : IEntityTypeConfiguration<OrderDetail>
             .IsRequired();
 
         builder.Property(od => od.UnitPrice)
-            .HasColumnType("decimal(18,2)")
+            .HasColumnType("DECIMAL(18,2)")
             .IsRequired();
 
         builder.Property(od => od.Tax)
-            .HasColumnType("decimal(18,2)")
+            .HasColumnType("DECIMAL(18,2)")
             .IsRequired();
 
         builder.Property(od => od.Discount)
-            .HasColumnType("decimal(18,2)")
+            .HasColumnType("DECIMAL(18,2)")
             .IsRequired();
 
         builder.Property(od => od.Amount)
-            .HasColumnType("decimal(18,2)")
+            .HasColumnType("DECIMAL(18,2)")
             .IsRequired();
 
         //Relationships

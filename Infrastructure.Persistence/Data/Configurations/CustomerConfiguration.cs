@@ -16,7 +16,7 @@ public class CustomerConfiguration : IEntityTypeConfiguration<Customer>
 
         //Properties
         builder.Property(c => c.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(c => c.Name)
@@ -36,11 +36,11 @@ public class CustomerConfiguration : IEntityTypeConfiguration<Customer>
             .IsRequired();
 
         builder.Property(c => c.CreatedAt)
-            .HasDefaultValueSql("GETDATE()")
+            .HasDefaultValueSql("NOW()")
             .IsRequired();
 
         builder.Property(c => c.UpdatedAt)
-            .HasDefaultValueSql("GETDATE()")
+            .HasDefaultValueSql("NOW()")
             .IsRequired();
 
         //Relationships

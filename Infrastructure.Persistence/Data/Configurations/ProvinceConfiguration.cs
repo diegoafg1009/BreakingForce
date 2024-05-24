@@ -16,7 +16,7 @@ public class ProvinceConfiguration : IEntityTypeConfiguration<Province>
 
         //Properties
         builder.Property(p => p.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(p => p.Name)

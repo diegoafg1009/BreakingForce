@@ -16,7 +16,7 @@ public class ProductFlavorConfiguration : IEntityTypeConfiguration<ProductFlavor
 
         //Properties
         builder.Property(pf => pf.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(pf => pf.Name)

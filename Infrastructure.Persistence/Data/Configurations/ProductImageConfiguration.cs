@@ -16,7 +16,7 @@ public class ProductImageConfiguration : IEntityTypeConfiguration<ProductImage>
 
         //Properties
         builder.Property(pi => pi.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(pi => pi.Url)

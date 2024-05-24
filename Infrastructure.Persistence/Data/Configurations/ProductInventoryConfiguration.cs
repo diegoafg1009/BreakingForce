@@ -16,7 +16,7 @@ public class ProductInventoryConfiguration : IEntityTypeConfiguration<ProductInv
 
         //Properties
         builder.Property(pi => pi.Id)
-            .HasDefaultValueSql("NEWID()")
+            .HasDefaultValueSql("UUID()")
             .IsRequired();
 
         builder.Property(pi => pi.Quantity)
