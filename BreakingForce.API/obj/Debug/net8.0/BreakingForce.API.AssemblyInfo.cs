@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BreakingForce.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e3767ed66da4e38970543852f76c7d6f63e8452")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61f5736afcc055ca79283bb4bf68d64b3592a2cd")]
 [assembly: System.Reflection.AssemblyProductAttribute("BreakingForce.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BreakingForce.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

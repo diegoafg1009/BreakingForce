@@ -19,6 +19,7 @@ public static class PersistenceServicesExtension
                 {
                     sqlOptions.MigrationsAssembly(typeof(ApplicationContext).Assembly.FullName);
                 });
+
         });
 
         services.AddScoped<IUnitOfWork, UnitOfWork>();

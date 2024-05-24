@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "v2l9piZOSKwayunetyk3KsVc34xTQfb5zoeXuDfzt1U9/gMn9y/GcDXgNuuTgBgH5NosQEQ5fcPgCFfJ9IvM+A==",
+  "dgSpecHash": "U2pqpqKELH9HxaOmkaYAo+RdUSHanJxlnaic9a9QBGsgMm9MY+bMhXbz0QvUDsfu37mll8AM67e2aNTwUvUtwA==",
   "success": true,
   "projectFilePath": "/home/diego-dev/RiderProjects/BreakingForce/Infrastructure.Persistence/Infrastructure.Persistence.csproj",
   "expectedPackageFiles": [
@@ -40,6 +40,8 @@
     "/home/diego-dev/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "/home/diego-dev/.nuget/packages/microsoft.sqlserver.server/1.0.0/microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "/home/diego-dev/.nuget/packages/microsoft.win32.systemevents/6.0.0/microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "/home/diego-dev/.nuget/packages/mysqlconnector/2.3.5/mysqlconnector.2.3.5.nupkg.sha512",
+    "/home/diego-dev/.nuget/packages/pomelo.entityframeworkcore.mysql/8.0.1/pomelo.entityframeworkcore.mysql.8.0.1.nupkg.sha512",
     "/home/diego-dev/.nuget/packages/system.configuration.configurationmanager/6.0.1/system.configuration.configurationmanager.6.0.1.nupkg.sha512",
     "/home/diego-dev/.nuget/packages/system.diagnostics.diagnosticsource/6.0.0/system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "/home/diego-dev/.nuget/packages/system.drawing.common/6.0.0/system.drawing.common.6.0.0.nupkg.sha512",

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oqXLuRt3elVTFYM/+jOh+fZgDlgBuGROv1mTUiL37WY8oD2IsXcGlE6GclA5MuaMTjHfun7gPHvFFhX8xW8vwg==",
+  "dgSpecHash": "jdctPkJbX3bfyAyOtN5xCHPN4Ml4gkoYMxbYeTLQfDAdBtSALxZmBIOnDbWmPaosoZyiMLClJUbMpgiFyC0jBw==",
   "success": true,
   "projectFilePath": "/home/diego-dev/RiderProjects/BreakingForce/BreakingForce.API/BreakingForce.API.csproj",
   "expectedPackageFiles": [
@@ -57,7 +57,9 @@
     "/home/diego-dev/.nuget/packages/microsoft.sqlserver.server/1.0.0/microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "/home/diego-dev/.nuget/packages/microsoft.win32.systemevents/6.0.0/microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "/home/diego-dev/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
+    "/home/diego-dev/.nuget/packages/mysqlconnector/2.3.5/mysqlconnector.2.3.5.nupkg.sha512",
     "/home/diego-dev/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/home/diego-dev/.nuget/packages/pomelo.entityframeworkcore.mysql/8.0.1/pomelo.entityframeworkcore.mysql.8.0.1.nupkg.sha512",
     "/home/diego-dev/.nuget/packages/swashbuckle.aspnetcore/6.4.0/swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "/home/diego-dev/.nuget/packages/swashbuckle.aspnetcore.swagger/6.4.0/swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "/home/diego-dev/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.4.0/swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
