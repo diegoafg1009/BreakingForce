@@ -17,11 +17,13 @@ public static class ApplicationServicesExtension
 
         services.AddScoped<IBrandService, BrandService>();
         services.AddScoped<ICategoryService, CategoryService>();
+        services.AddScoped<ICustomerService, CustomerService>();
         services.AddScoped<IFlavorService, FlavorService>();
         services.AddScoped<IObjectiveService, ObjectiveService>();
         services.AddScoped<IProductService, ProductService>();
         services.AddScoped<ISubcategoryService, SubcategoryService>();
         services.AddScoped<IVariationService, VariationService>();
+        services.AddScoped<IValidationService, ValidationService>();
 
         #endregion
 

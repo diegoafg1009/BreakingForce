@@ -43,10 +43,19 @@ public class CustomerConfiguration : IEntityTypeConfiguration<Customer>
             .HasDefaultValueSql("NOW()")
             .IsRequired();
 
+        builder.Property(c => c.AddressId)
+            .IsRequired(false);
+
+        builder.Property(c => c.EnterpriseDataId)
+            .IsRequired(false);
+        
+        builder.Property(c => c.IdentificationId)
+            .IsRequired(false);
+
         //Relationships
         builder.HasOne(c => c.EnterpriseData)
             .WithOne(ed => ed.Customer)
-            .HasForeignKey<Customer>(c => c.EnterpriseDataId);
+            .HasForeignKey<EnterpriseData>(c => c.CustomerId);
         
         builder.HasMany(c => c.Orders)
             .WithOne(o => o.Customer)
@@ -58,7 +67,9 @@ public class CustomerConfiguration : IEntityTypeConfiguration<Customer>
 
         builder.HasOne(c => c.Identification)
             .WithOne(i => i.Customer)
-            .HasForeignKey<Identification>(i => i.CustomerId)
-            .IsRequired();
+            .HasForeignKey<Identification>(i => i.CustomerId);
+
+        builder.HasOne(c => c.CustomerLockoutInfo)
+            .WithOne(cli => cli.Customer);
     }
 }

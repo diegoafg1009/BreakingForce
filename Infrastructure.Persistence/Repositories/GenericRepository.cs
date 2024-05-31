@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Persistence.Repositories;
 
-public class GenericRepository<T> : IGenericRepository <T> where T : class
+public class GenericRepository<T> : IGenericRepository<T> where T : class
 {
     private readonly ApplicationContext _context;
     internal DbSet<T> DbSet;
@@ -47,6 +47,11 @@ public class GenericRepository<T> : IGenericRepository <T> where T : class
         return await DbSet.FindAsync(id);
     }
 
+    public virtual async Task<IEnumerable<T>> GetRangeByIdsAsync(IEnumerable<Guid> ids)
+    {
+        return await DbSet.Where(e => ids.Contains((Guid)e.GetType().GetProperty("Id")!.GetValue(e))!).ToListAsync();
+    }
+
     public virtual async Task<IEnumerable<T>> GetAllAsync()
     {
         return await DbSet.ToListAsync();
@@ -81,9 +86,6 @@ public class GenericRepository<T> : IGenericRepository <T> where T : class
 
     public async Task DeleteRangeAsync(IEnumerable<T> entities)
     {
-        await Task.Run(() =>
-        {
-            DbSet.RemoveRange(entities);
-        });
+        await Task.Run(() => { DbSet.RemoveRange(entities); });
     }
 }

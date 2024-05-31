@@ -33,6 +33,15 @@ public class ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddlewa
                 case NotFoundException:
                     response.StatusCode = (int)HttpStatusCode.NotFound;
                     break;
+                case UnauthorizedException:
+                    response.StatusCode = (int)HttpStatusCode.Unauthorized;
+                    break;
+                case ForbiddenException:
+                    response.StatusCode = (int)HttpStatusCode.Forbidden;
+                    break;
+                case ConflictException:
+                    response.StatusCode = (int)HttpStatusCode.Conflict;
+                    break;
                 default:
                     response.StatusCode = (int)HttpStatusCode.InternalServerError;
                     break;

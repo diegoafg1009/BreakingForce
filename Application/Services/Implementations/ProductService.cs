@@ -93,10 +93,12 @@ public class ProductService(IUnitOfWork unitOfWork, IMapper mapper, IFileStorage
             }
             else
             {
-                product.Variations.First(x => x.Id == variation.Id).ProductInventory = inventory;
-                product.Variations.First(x => x.Id == variation.Id).ProductInventoryId = inventory.Id;
+                var actualVariation = product.Variations.First(x => x.Id == variation.Id);
+                actualVariation.ProductInventory = inventory;
+                actualVariation.ProductInventoryId = inventory.Id;
                 if (variation.Stock != inventory.Quantity)
                 {
+                    actualVariation.ProductInventory.Quantity = variation.Stock;
                     transaction.TransactionDetails.Add(new TransactionDetail
                     {
                         AmountAffected = variation.Stock - inventory.Quantity,

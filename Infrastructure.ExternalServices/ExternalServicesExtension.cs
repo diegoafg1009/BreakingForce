@@ -1,5 +1,7 @@
 using Application.Repositories;
 using Application.Services.Interfaces;
+using Infrastructure.ExternalServices.Email;
+using Infrastructure.ExternalServices.Email.Contracts;
 using Infrastructure.ExternalServices.FileStorage;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,6 +19,8 @@ public static class ExternalServicesExtension
             var baseDirectory = Path.Combine(environment.ContentRootPath, "wwwroot", "images");
             return new LocalFileStorageService(baseDirectory);
         });
+        services.Configure<SmtpClientOptions>(configuration.GetSection("SmtpSettings"));
+        services.AddTransient<IEmailService, SmtpEmailService>();
 
         return services;
     }

@@ -108,7 +108,6 @@ namespace Infrastructure.Persistence.Data.Migrations
                         .HasDefaultValueSql("UUID()");
 
                     b.Property<Guid?>("AddressId")
-                        .IsRequired()
                         .HasColumnType("char(36)");
 
                     b.Property<DateTime>("CreatedAt")
@@ -124,7 +123,7 @@ namespace Infrastructure.Persistence.Data.Migrations
                     b.Property<Guid?>("EnterpriseDataId")
                         .HasColumnType("char(36)");
 
-                    b.Property<Guid>("IdentificationId")
+                    b.Property<Guid?>("IdentificationId")
                         .HasColumnType("char(36)");
 
                     b.Property<string>("Name")
@@ -157,6 +156,55 @@ namespace Infrastructure.Persistence.Data.Migrations
                         .IsUnique();
 
                     b.ToTable("Customers", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Entities.CustomerLockoutInfo", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)")
+                        .HasDefaultValueSql("UUID()");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("CustomerId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime?>("LockoutEnd")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CustomerId")
+                        .IsUnique();
+
+                    b.ToTable("CustomerLockoutInfos", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Entities.CustomerRegisterConfirmation", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)")
+                        .HasDefaultValueSql("UUID()");
+
+                    b.Property<Guid>("CustomerId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("ExpirationDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CustomerId")
+                        .IsUnique();
+
+                    b.ToTable("CustomerRegisterConfirmations", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.DeliveryMethod", b =>
@@ -1023,6 +1071,28 @@ namespace Infrastructure.Persistence.Data.Migrations
                     b.Navigation("Identification");
                 });
 
+            modelBuilder.Entity("Domain.Entities.CustomerLockoutInfo", b =>
+                {
+                    b.HasOne("Domain.Entities.Customer", "Customer")
+                        .WithOne("CustomerLockoutInfo")
+                        .HasForeignKey("Domain.Entities.CustomerLockoutInfo", "CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
+                });
+
+            modelBuilder.Entity("Domain.Entities.CustomerRegisterConfirmation", b =>
+                {
+                    b.HasOne("Domain.Entities.Customer", "Customer")
+                        .WithOne("CustomerRegisterConfirmation")
+                        .HasForeignKey("Domain.Entities.CustomerRegisterConfirmation", "CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
+                });
+
             modelBuilder.Entity("Domain.Entities.District", b =>
                 {
                     b.HasOne("Domain.Entities.Province", "Province")
@@ -1319,6 +1389,10 @@ namespace Infrastructure.Persistence.Data.Migrations
                 {
                     b.Navigation("Address")
                         .IsRequired();
+
+                    b.Navigation("CustomerLockoutInfo");
+
+                    b.Navigation("CustomerRegisterConfirmation");
 
                     b.Navigation("EnterpriseData");
 

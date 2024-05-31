@@ -23,4 +23,10 @@ public class VariationService(IUnitOfWork unitOfWork, IMapper mapper) : IVariati
         
         return _mapper.Map<GetVariation>(variation)!;
     }
+
+    public async Task<List<GetVariation>> GetVariationsById(IEnumerable<Guid> ids)
+    {
+        var variations = await _unitOfWork.Variations.GetRangeByIdsAsync(ids);
+        return _mapper.Map<List<GetVariation>>(variations) ?? [];
+    }
 }

@@ -8,6 +8,12 @@ public class UnitOfWork(ApplicationContext context) : IUnitOfWork
 {
     public IBrandRepository Brands { get; } = new BrandRepository(context);
     public ICategoryRepository Categories { get; } = new CategoryRepository(context);
+    public ICustomerRepository Customers { get; } = new CustomerRepository(context);
+    public ICustomerLockoutInfoRepository CustomerLockoutInfos { get; } = new CustomerLockoutInfoRepository(context);
+
+    public ICustomerRegisterConfirmationRepository CustomerRegisterConfirmationsRepository { get; } =
+        new CustomerRegisterConfirmationRepository(context);
+
     public IFlavorRepository Flavors { get; } = new FlavorRepository(context);
     public IInventoryRepository Inventories { get; } = new InventoryRepository(context);
     public IObjectiveRepository Objectives { get; } = new ObjectiveRepository(context);

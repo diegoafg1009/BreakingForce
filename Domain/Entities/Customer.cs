@@ -11,11 +11,13 @@ public class Customer : BaseModel
     public string Password { get; set; } = null!;
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
-    public Guid IdentificationId { get; set; }
-    public Identification Identification { get; set; } = null!;
+    public Guid? IdentificationId { get; set; }
+    public Identification? Identification { get; set; }
     public Guid? EnterpriseDataId { get; set; }
     public EnterpriseData? EnterpriseData { get; set; }
     public Guid? AddressId { get; set; }
     public Address? Address { get; set; }
     public List<Order> Orders { get; set; } = [];
+    public CustomerLockoutInfo? CustomerLockoutInfo { get; set; }
+    public CustomerRegisterConfirmation? CustomerRegisterConfirmation { get; set; }
 }

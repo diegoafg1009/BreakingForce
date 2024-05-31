@@ -10,6 +10,7 @@ public static class VariationsEndpoint
     public static RouteGroupBuilder MapVariations(this RouteGroupBuilder group)
     {
         group.MapGet("/{variationId}", GetVariation);
+        group.MapPost("/by-ids", GetVariationsById);
         return group;
     }
 
@@ -17,6 +18,12 @@ public static class VariationsEndpoint
     {
         var variation = await variationService.GetVariation(variationId);
         return TypedResults.Ok(variation);
+    }
+
+    private static async Task<Ok<List<GetVariation>>> GetVariationsById([FromServices] IVariationService variationService, [FromBody]IEnumerable<Guid> ids)
+    {
+        var variations = await variationService.GetVariationsById(ids);
+        return TypedResults.Ok(variations);
     }
 
 }
