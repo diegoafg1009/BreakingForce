@@ -22,6 +22,6 @@ public class VariationProfile : Profile
             .ForMember(dest => dest.Stock, opt => opt.MapFrom(src => src.ProductInventory.Quantity))
             .ForMember(dest => dest.FlavorName, opt => opt.MapFrom(src => src.Flavor != null ? src.Flavor.Name : null))
             .ForMember(dest => dest.FlavorColor, opt => opt.MapFrom(src => src.Flavor != null ? src.Flavor.Color : null))
-            .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Product.Images.FirstOrDefault()!.Url));
+            .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Product.Images.FirstOrDefault(x => x.Order == 1)!.Url));
     }
 }

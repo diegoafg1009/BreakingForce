@@ -8,7 +8,6 @@ public class ShipmentStatusFactory : StatusFactory<ShipmentStatuses>
 {
     protected override Status FactoryMethod(ShipmentStatuses statusName)
     {
-        //TODO: PUT REAL GUIDS
         return statusName switch
         {
             ShipmentStatuses.InPreparation => new ShipmentStatus(Guid.Parse("896ac5dc-5ee5-42ba-be53-4bc0e36ed2d6"), "En preparación"),

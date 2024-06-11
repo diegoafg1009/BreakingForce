@@ -27,5 +27,10 @@ public class IdentificationTypeConfiguration : IEntityTypeConfiguration<Identifi
         builder.HasMany(it => it.Identifications)
             .WithOne(i => i.IdentificationType)
             .HasForeignKey(i => i.IdentificationTypeId);
+
+        builder.HasMany<Invoice>()
+            .WithOne()
+            .HasForeignKey(i => i.IdentificationTypeId)
+            .IsRequired();
     }
 }

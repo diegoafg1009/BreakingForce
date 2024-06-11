@@ -1,4 +1,5 @@
 using Application.Services.Interfaces;
+using Application.Utils;
 using BreakingForce.API.Utils;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
@@ -20,7 +21,7 @@ public static class ImagesEndpoint
         await fileStorageService.GetFile(path, stream);
         stream.Position = 0;
         var extension = Path.GetExtension(path);
-        var contentType = MimeTypesExtensions.GetByExtension(extension);
+        var contentType = MimeMapping.GetMime(extension);
         return Results.File(stream, contentType);
     }
 }

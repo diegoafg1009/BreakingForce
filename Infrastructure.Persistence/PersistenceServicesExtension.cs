@@ -18,7 +18,10 @@ public static class PersistenceServicesExtension
             options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString),
                 mySqlOptionsAction: sqlOptions =>
                 {
-                    sqlOptions.MigrationsAssembly(typeof(ApplicationContext).Assembly.FullName);
+                    sqlOptions.MigrationsAssembly(typeof(ApplicationContext).Assembly.FullName).EnableRetryOnFailure(
+                        maxRetryCount: 5,
+                        maxRetryDelay: TimeSpan.FromSeconds(30),
+                        errorNumbersToAdd: null);
                 });
 
         });

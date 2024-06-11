@@ -19,9 +19,18 @@ public class InvoiceConfiguration : IEntityTypeConfiguration<Invoice>
             .HasDefaultValueSql("UUID()")
             .IsRequired();
 
-        builder.Property(i => i.AssociatedDocument)
-            .HasMaxLength(11)
+        builder.Property(i => i.IdentificationTypeId)
             .IsRequired();
+
+        builder.Property(i => i.IdentificationNumber)
+            .HasMaxLength(9)
+            .IsRequired();
+
+        builder.Property(i => i.Ruc)
+            .HasMaxLength(11);
+
+        builder.Property(i => i.BusinessName)
+            .HasMaxLength(250);
 
         builder.Property(i => i.SubTotal)
             .HasColumnType("DECIMAL(18,2)")
@@ -39,7 +48,7 @@ public class InvoiceConfiguration : IEntityTypeConfiguration<Invoice>
             .HasColumnType("DECIMAL(18,2)")
             .IsRequired();
 
-        builder.Property(i => i.Amount)
+        builder.Property(i => i.Total)
             .HasColumnType("DECIMAL(18,2)")
             .IsRequired();
 

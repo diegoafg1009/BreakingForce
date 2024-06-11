@@ -1,8 +1,8 @@
-namespace BreakingForce.API.Utils;
+namespace Application.Utils;
 
-public static class MimeTypesExtensions
+public static class MimeMapping
 {
-    public static string GetByExtension(string extension)
+    public static string GetMime(string extension)
     {
         return extension.ToLowerInvariant() switch
         {
@@ -50,9 +50,51 @@ public static class MimeTypesExtensions
         };
     }
 
-    public static string GetByFileName(string fileName)
+    public static string GetExtension(string mimeType)
+    {
+        return mimeType.ToLowerInvariant() switch
+        {
+            "image/png" => ".png",
+            "image/jpeg" => ".jpg",
+            "image/gif" => ".gif",
+            "image/bmp" => ".bmp",
+            "image/tiff" => ".tiff",
+            "image/svg+xml" => ".svg",
+            "image/webp" => ".webp",
+            "image/x-icon" => ".ico",
+            "image/apng" => ".apng",
+            "image/avif" => ".avif",
+            "image/flif" => ".flif",
+            "image/heif" => ".heif",
+            "image/heic" => ".heic",
+            "image/jp2" => ".jp2",
+            "image/jxr" => ".jxr",
+            "image/vnd.ms-photo" => ".wdp",
+            "image/bpg" => ".bpg",
+            "image/x-canon-cr2" => ".cr2",
+            "image/x-olympus-orf" => ".orf",
+            "image/x-sony-arw" => ".arw",
+            "image/x-adobe-dng" => ".dng",
+            "image/x-nikon-nef" => ".nef",
+            "image/x-panasonic-rw2" => ".rw2",
+            "image/x-fuji-raf" => ".raf",
+            "image/x-pentax-pef" => ".pef",
+            "image/x-samsung-srw" => ".srw",
+            "image/x-sigma-x3f" => ".x3f",
+            "video/webm" => ".webm",
+            "video/x-matroska" => ".mkv",
+            "video/x-flv" => ".flv",
+            "video/x-ms-vob" => ".vob",
+            "video/ogg" => ".ogv",
+            "video/x-dirac" => ".drc",
+            "video/gif" => ".gifv",
+            _ => string.Empty
+        };
+    }
+
+    public static string GetMimeByFileName(string fileName)
     {
         var extension = Path.GetExtension(fileName).ToLowerInvariant();
-        return GetByExtension(extension);
+        return GetMime(extension);
     }
 }

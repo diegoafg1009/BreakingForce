@@ -30,15 +30,11 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
         builder.Property(o => o.Note)
             .HasMaxLength(300);
 
-        builder.Property(o => o.ReferencePhone)
-            .HasMaxLength(9)
-            .IsRequired();
-
         //Relationships
         builder.HasOne(o => o.Customer)
             .WithMany(c => c.Orders)
             .HasForeignKey(o => o.CustomerId)
-            .IsRequired();
+            .IsRequired(false);
 
         builder.HasMany(o => o.OrderDetails)
             .WithOne(od => od.Order)
