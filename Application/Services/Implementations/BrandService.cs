@@ -26,7 +26,13 @@ public class BrandService(IUnitOfWork unitOfWork, IMapper mapper, IFileStorageSe
 
     public async Task<List<GetBrand>> GetAllBrands()
     {
-        var brands = (await _unitOfWork.Brands.GetAllWithAnyProductAsync());
+        var brands = await _unitOfWork.Brands.GetAllAsync();
+        return _mapper.Map<List<GetBrand>>(brands) ?? [];
+    }
+
+    public async Task<List<GetBrand>> GetAllWithAnyProduct()
+    {
+        var brands = await _unitOfWork.Brands.GetAllWithAnyProductAsync();
         return _mapper.Map<List<GetBrand>>(brands) ?? [];
     }
 }

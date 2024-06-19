@@ -10,12 +10,19 @@ public static class SubcategoriesEndpoint
     public static RouteGroupBuilder MapSubcategories(this RouteGroupBuilder group)
     {
         group.MapGet("/get-all", GetAllSubcategories);
+        group.MapGet("/get-all-active", GetAllActiveSubcategories);
         return group;
     }
 
     private static async Task<Ok<List<GetSubcategory>>> GetAllSubcategories([FromServices] ISubcategoryService subcategoryService)
     {
         var subcategories = await subcategoryService.GetAllSubcategories();
+        return TypedResults.Ok(subcategories);
+    }
+
+    private static async Task<Ok<List<GetSubcategory>>> GetAllActiveSubcategories([FromServices] ISubcategoryService subcategoryService)
+    {
+        var subcategories = await subcategoryService.GetAllWithAnyProduct();
         return TypedResults.Ok(subcategories);
     }
 }

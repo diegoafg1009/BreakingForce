@@ -9,6 +9,7 @@ public class GetVariation
     public int Stock { get; set; }
     public bool IsActive { get; set; }
     public string ProductName { get; set; } = null!;
+    public Guid ProductId { get; set; }
     public string? FlavorName { get; set; }
     public string? FlavorColor { get; set; }
     public string Image { get; set; } = null!;

@@ -5,4 +5,5 @@ namespace Application.Services.Interfaces;
 public interface ISubcategoryService
 {
     Task<List<GetSubcategory>> GetAllSubcategories();
+    Task<List<GetSubcategory>> GetAllWithAnyProduct();
 }

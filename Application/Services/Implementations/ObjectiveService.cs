@@ -12,6 +12,12 @@ public class ObjectiveService(IUnitOfWork unitOfWork, IMapper mapper) : IObjecti
 
     public async Task<List<GetObjective>> GetAllObjectives()
     {
+        var objectives = await _unitOfWork.Objectives.GetAllAsync();
+        return _mapper.Map<List<GetObjective>>(objectives) ?? [];
+    }
+
+    public async Task<List<GetObjective>> GetAllWithAnyProduct()
+    {
         var objectives = await _unitOfWork.Objectives.GetAllWithAnyProductAsync();
         return _mapper.Map<List<GetObjective>>(objectives) ?? [];
     }

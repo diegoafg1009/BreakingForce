@@ -8,4 +8,5 @@ public interface IBrandService
 {
     public Task<GetBrand> CreateBrand(CreateBrand createBrand);
     public Task<List<GetBrand>> GetAllBrands();
+    public Task<List<GetBrand>> GetAllWithAnyProduct();
 }

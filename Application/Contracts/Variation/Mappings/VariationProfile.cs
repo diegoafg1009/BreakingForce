@@ -19,6 +19,7 @@ public class VariationProfile : Profile
         CreateMap<UpdateVariation, ProductVariation>();
         CreateMap<ProductVariation, GetVariation>()
             .ForMember(dest => dest.ProductName, opt => opt.MapFrom(src => src.Product.Name))
+.ForMember(dest => dest.ProductId, opt => opt.MapFrom(src => src.Product.Id))
             .ForMember(dest => dest.Stock, opt => opt.MapFrom(src => src.ProductInventory.Quantity))
             .ForMember(dest => dest.FlavorName, opt => opt.MapFrom(src => src.Flavor != null ? src.Flavor.Name : null))
             .ForMember(dest => dest.FlavorColor, opt => opt.MapFrom(src => src.Flavor != null ? src.Flavor.Color : null))

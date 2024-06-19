@@ -12,6 +12,7 @@ public static class BrandsEndpoint
     {
         group.MapPost("/", CreateBrand).DisableAntiforgery().Accepts<CreateBrand>("multipart/form-data");
         group.MapGet("/get-all", GetAllBrands);
+        group.MapGet("/get-all-active", GetAllActiveBrands);
         return group;
     }
 
@@ -27,4 +28,11 @@ public static class BrandsEndpoint
         var brands = await brandService.GetAllBrands();
         return TypedResults.Ok(brands);
     }
+
+    private static async Task<Ok<List<GetBrand>>> GetAllActiveBrands([FromServices] IBrandService brandService)
+    {
+        var brands = await brandService.GetAllWithAnyProduct();
+        return TypedResults.Ok(brands);
+    }
+
 }
