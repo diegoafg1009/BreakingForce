@@ -5,5 +5,5 @@ namespace Application.Repositories;
 
 public interface IProductRepository : IGenericRepository<Product>
 {
-    Task<(IEnumerable<Product>, double)> GetWithFiltersAsync(ProductFilterDto filterDto);
+    Task<IQueryable<Product>> GetAllAsQueryable();
 }

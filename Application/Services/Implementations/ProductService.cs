@@ -5,6 +5,7 @@ using Application.Repositories;
 using Application.Services.Interfaces;
 using Application.Utils;
 using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using Domain.Entities;
 using Microsoft.AspNetCore.Http;
 
@@ -125,9 +126,55 @@ public class ProductService(IUnitOfWork unitOfWork, IMapper mapper, IFileStorage
 
     public async Task<(List<GetProductSimpleDto>, double)> FilterProducts(ProductFilterDto filterDto)
     {
-        var (paginatedProducts, totalRecords) = await _unitOfWork.Products.GetWithFiltersAsync(filterDto);
-        var getProductSimple = _mapper.Map<List<GetProductSimpleDto>>(paginatedProducts) ?? [];
-        return (getProductSimple, totalRecords);
+        //var (paginatedProducts, totalRecords) = await _unitOfWork.Products.GetWithFiltersAsync(filterDto);
+        //var getProductSimple = _mapper.Map<List<GetProductSimpleDto>>(paginatedProducts) ?? [];
+        //return (getProductSimple, totalRecords);
+
+        var products = await _unitOfWork.Products.GetAllAsQueryable();
+
+        if (!string.IsNullOrWhiteSpace(filterDto.Search))
+        {
+            products = products.Where(p => p.Name.Contains(filterDto.Search));
+        }
+
+        if (filterDto.SubcategoryId != null)
+        {
+            products = products.Where(p => p.SubcategoryId == filterDto.SubcategoryId);
+        }
+
+        if (filterDto.BrandId != null)
+        {
+            products = products.Where(p => p.BrandId == filterDto.BrandId);
+        }
+
+        if (filterDto.ObjectiveId != null)
+        {
+            products = products.Where(p => p.ObjectiveId == filterDto.ObjectiveId);
+        }
+
+        var getProductSimpleDto = products.ProjectTo<GetProductSimpleDto>(_mapper.ConfigurationProvider);
+
+        if (!string.IsNullOrWhiteSpace(filterDto.SortBy))
+        {
+            var propertyInfo = typeof(GetProductSimpleDto).GetProperty(filterDto.SortBy);
+            if (propertyInfo != null)
+            {
+                getProductSimpleDto = filterDto.IsSortAscending
+                    ? getProductSimpleDto.OrderBy(filterDto.SortBy)
+                    : getProductSimpleDto.OrderByDescending(filterDto.SortBy);
+            }
+            else
+            {
+                throw new AppException("Invalid sort by property.");
+            }
+        }
+
+        var totalRecords = getProductSimpleDto.Count();
+
+        var getProductSimpleDtoPaginated = getProductSimpleDto.Paginate(filterDto.Page, filterDto.PageSize).ToList();
+
+        return (getProductSimpleDtoPaginated, totalRecords);
+
     }
 
     private Transaction CreateTransaction(Guid userId, TransactionTypes transactionType)

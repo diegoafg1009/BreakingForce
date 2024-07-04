@@ -45,7 +45,7 @@ public static class ProductsEndpoint
         [FromServices] IProductService productService, HttpContext httpContext)
     {
         var (paginatedProducts, recordsPerPage) = await productService.FilterProducts(filterDto);
-        httpContext.InsertPaginationParametersInHeader(recordsPerPage, paginatedProducts.Count);
+        httpContext.InsertPaginationParametersInHeader(recordsPerPage, filterDto.PageSize);
         return TypedResults.Ok(paginatedProducts);
     }
 }

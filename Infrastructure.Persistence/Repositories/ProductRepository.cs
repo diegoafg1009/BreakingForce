@@ -33,9 +33,9 @@ public class ProductRepository(ApplicationContext context) : GenericRepository<P
         });
     }
 
-    public async Task<(IEnumerable<Product>, double)> GetWithFiltersAsync(ProductFilterDto filterDto)
+    public async Task<IQueryable<Product>> GetAllAsQueryable()
     {
-        var queryable = DbSet
+        return DbSet
             .Include(x => x.Subcategory)
             .Include(x => x.Brand)
             .Include(x => x.Objective)
@@ -43,47 +43,5 @@ public class ProductRepository(ApplicationContext context) : GenericRepository<P
             .Include(x => x.Variations)
             .ThenInclude(y => y.ProductInventory)
             .AsQueryable();
-
-
-        if (!string.IsNullOrWhiteSpace(filterDto.Search))
-        {
-            queryable = queryable.Where(p => p.Name.Contains(filterDto.Search));
-        }
-
-        if (filterDto.SubcategoryId != null)
-        {
-            queryable = queryable.Where(p => p.SubcategoryId == filterDto.SubcategoryId);
-        }
-
-        if (filterDto.BrandId != null)
-        {
-            queryable = queryable.Where(p => p.BrandId == filterDto.BrandId);
-        }
-
-        if (filterDto.ObjectiveId != null)
-        {
-            queryable = queryable.Where(p => p.ObjectiveId == filterDto.ObjectiveId);
-        }
-
-        if (!string.IsNullOrWhiteSpace(filterDto.SortBy))
-        {
-            var propertyInfo = typeof(Product).GetProperty(filterDto.SortBy);
-            if (propertyInfo != null)
-            {
-                queryable = filterDto.IsSortAscending
-                    ? queryable.OrderBy(p => propertyInfo.GetValue(p, null))
-                    : queryable.OrderByDescending(p => propertyInfo.GetValue(p, null));
-            }
-            else
-            {
-                throw new AppException("Invalid sort by property.");
-            }
-        }
-
-        var totalRecords = await queryable.CountAsync();
-
-        var products = await queryable.Paginate(filterDto.Page, filterDto.PageSize).ToListAsync();
-
-        return (products, totalRecords);
     }
 }
